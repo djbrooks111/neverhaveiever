@@ -100,7 +100,7 @@
         [self.view addSubview:bannerView_];
         
         GADRequest *request = [GADRequest request];
-        request.testDevices = [NSArray arrayWithObjects:@"ae2f7740d94b1d3be529b0959e8893d7", @"GAD_SIMULATOR_ID", nil];
+        //request.testDevices = [NSArray arrayWithObjects:@"ae2f7740d94b1d3be529b0959e8893d7", @"GAD_SIMULATOR_ID", nil];
         [bannerView_ loadRequest:request];
     
         interstitial_ = [[GADInterstitial alloc] init];
@@ -201,7 +201,7 @@
 
 -(void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
     NSLog(@"AdMob Full error: %@", error);
-    [self leaveView];
+    //[self leaveView];
 }
 
 -(void)setAdTracker:(int)tracker {
