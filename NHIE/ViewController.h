@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuestionViewController.h"
+#import "DataStorage.h"
+#import "AwesomeMenu.h"
+#import "AboutViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AwesomeMenuDelegate> {
+    IBOutlet UINavigationBar *navigationBar;
+    IBOutlet QuestionViewController *questionView;
+    IBOutlet AboutViewController *aboutView;
+}
 
 @end

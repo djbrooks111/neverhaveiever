@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataStorage.h"
+#import "MKStoreManager.h"
+#import "ALSdk.h"
+#import "Flurry.h"
 
 @class ViewController;
 

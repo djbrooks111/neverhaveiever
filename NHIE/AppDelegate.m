@@ -16,6 +16,20 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // Global Data Storage
+    categoryString = [[NSString alloc] init];
+    urlString = [[NSString alloc] init];
+    
+    // MKStoreKit
+    [MKStoreManager sharedManager];
+    
+    // AppLovin
+    [ALSdk initializeSdk];
+    
+    // Flurry
+    [Flurry startSession:@"B3QCQGRWD7GFK24TSH2J"];
+    
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
