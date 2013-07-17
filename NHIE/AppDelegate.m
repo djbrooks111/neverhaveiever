@@ -30,6 +30,9 @@
     // Flurry
     [Flurry startSession:@"B3QCQGRWD7GFK24TSH2J"];
     
+    // Crashlytics
+    [Crashlytics startWithAPIKey:@"36bd787eb00af9c0f9381272c3517d1d5eaa83e8"];
+    
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

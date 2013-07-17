@@ -89,6 +89,7 @@
 		269FD437178CEB5700B2C197 /* libAppLovinSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 269FD436178CEB5700B2C197 /* libAppLovinSdk.a */; };
 		269FD445178CEC4F00B2C197 /* AppLovinCustomEventBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 269FD444178CEC4F00B2C197 /* AppLovinCustomEventBanner.m */; };
 		269FD44E178CECC300B2C197 /* AppLovinCustomEventInter.m in Sources */ = {isa = PBXBuildFile; fileRef = 269FD44D178CECC300B2C197 /* AppLovinCustomEventInter.m */; };
+		26B081B81797378600716BD8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B081B71797378600716BD8 /* Crashlytics.framework */; };
 		26C48449178A25AB00DDD368 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C48446178A25AB00DDD368 /* NSData+MKBase64.m */; };
 		26C4844A178A25AB00DDD368 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C48448178A25AB00DDD368 /* SFHFKeychainUtils.m */; };
 		26C48450178A25C100DDD368 /* MKSKProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C4844C178A25C100DDD368 /* MKSKProduct.m */; };
@@ -232,6 +233,7 @@
 		269FD44B178CEC9100B2C197 /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
 		269FD44C178CECC300B2C197 /* AppLovinCustomEventInter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLovinCustomEventInter.h; sourceTree = "<group>"; };
 		269FD44D178CECC300B2C197 /* AppLovinCustomEventInter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLovinCustomEventInter.m; sourceTree = "<group>"; };
+		26B081B71797378600716BD8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		26C48445178A25AB00DDD368 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
 		26C48446178A25AB00DDD368 /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
 		26C48447178A25AB00DDD368 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				26575DA4179213A900C816E6 /* libAdapterSDKFlurryAppCircle.a in Frameworks */,
 				26575DA8179213BD00C816E6 /* libFlurryAds_4.2.2.a in Frameworks */,
 				26575DAB179213C600C816E6 /* libFlurry_4.2.2.a in Frameworks */,
+				26B081B81797378600716BD8 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +319,7 @@
 		269D7BCE17443CF50036511A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26B081B71797378600716BD8 /* Crashlytics.framework */,
 				260FFB1A178A18D60052D72B /* iAd.framework */,
 				260FFB08178A16A60052D72B /* AVFoundation.framework */,
 				260FFB04178A16000052D72B /* CFNetwork.framework */,
@@ -525,6 +529,7 @@
 				269D7BC817443CF50036511A /* Sources */,
 				269D7BC917443CF50036511A /* Frameworks */,
 				269D7BCA17443CF50036511A /* Resources */,
+				26B081B61797376900716BD8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -612,6 +617,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26B081B61797376900716BD8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 36bd787eb00af9c0f9381272c3517d1d5eaa83e8";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		269D7BC817443CF50036511A /* Sources */ = {

@@ -11,6 +11,7 @@
 #import "MKStoreManager.h"
 #import "ALSdk.h"
 #import "Flurry.h"
+#import <Crashlytics/Crashlytics.h>
 
 @class ViewController;
 
