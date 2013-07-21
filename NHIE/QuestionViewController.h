@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GADBannerView.h"
-#import "GADInterstitial.h"
-#import "GADBannerViewDelegate.h"
-#import "GADInterstitialDelegate.h"
 #import "DataStorage.h"
 #import "MBProgressHUD.h"
 #import "MKStoreManager.h"
+#import "MPAdView.h"
+#import "MPInterstitialAdController.h"
 
-@interface QuestionViewController : UIViewController <GADBannerViewDelegate, GADInterstitialDelegate> {
+@interface QuestionViewController : UIViewController <MPAdViewDelegate, MPInterstitialAdControllerDelegate> {
     IBOutlet UINavigationBar *navigationBar;
     IBOutlet UIBarButtonItem *navigationBarBackButton;
     NSMutableArray *questionArray;
@@ -24,13 +22,14 @@
     IBOutlet UIButton *removeAdButton;
     int indexTracker;
     int adTracker;
-
-    GADBannerView *bannerView_;
-    GADInterstitial *interstitial_;
+    int otherAdTracker;
 }
 
 @property (nonatomic, retain) NSMutableArray *questionArray;
+@property (nonatomic, retain) MPAdView *adView;
+@property (nonatomic, retain) MPInterstitialAdController *interstitial;
 
 -(void)setAdTracker:(int)tracker;
+-(void)leaveView;
 
 @end

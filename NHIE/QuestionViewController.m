@@ -36,21 +36,44 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSLog(@"viewDidLoad entered");
     
     // Creating background view
     [self createBackgroundView];
     
     if ([MKStoreManager isFeaturePurchased:@"removeAds"]) {
         // SHOW NO ADS
-        [bannerView_ setHidden:YES];
-        [bannerView_ setAlpha:0];
-        [bannerView_ removeFromSuperview];
-        bannerView_ = NULL;
-        interstitial_ = NULL;
+        [self.adView setHidden:YES];
+        [self.adView setAlpha:0];
+        [self.adView removeFromSuperview];
+        self.adView = NULL;
+        self.interstitial = NULL;
         [removeAdButton setHidden:YES];
         [removeAdButton removeFromSuperview];
         removeAdButton.frame = CGRectMake(0, 0, 0, 0);
         removeAdButton = NULL;
+    } else {
+        // SHOW ADS
+        // MoPub
+        self.adView = [[MPAdView alloc] initWithAdUnitId:@"6f71e4b432744296a12deede3df084a3" size:MOPUB_BANNER_SIZE];
+        self.adView.testing = YES;
+        self.adView.delegate = self;
+        [self.adView startAutomaticallyRefreshingContents];
+        CGRect frame = self.adView.frame;
+        CGSize size = [self.adView adContentViewSize];
+        frame.origin.y = [[UIScreen mainScreen] applicationFrame].size.height - size.height;
+        self.adView.frame = frame;
+        [self.view addSubview:self.adView];
+        [self.adView loadAd];
+        
+        self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"b58296ef5de043a6be0270ee5ff35a4e"];
+        self.interstitial.testing = YES;
+        self.interstitial.delegate = self;
+        [self.interstitial loadAd];
+        
+        otherAdTracker = 1;
+        
+        NSLog(@"MoPub Banner Testing: %@ and Full Screen Testing: %@", self.adView.testing ? @"YES" : @"NO", self.interstitial.testing ? @"YES" : @"NO");
     }
     
     navigationBar.topItem.title = categoryString;
@@ -91,22 +114,12 @@
         adTracker = 0;
         [self leaveView];
     } else {
-        // Admob Mediation
-        bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
-        bannerView_.adUnitID = @"72897db595724f84";
-        [bannerView_ setDelegate:self];
-        bannerView_.rootViewController = self;
-        [bannerView_ setHidden:YES];
-        [self.view addSubview:bannerView_];
-        
-        GADRequest *request = [GADRequest request];
-        //request.testDevices = [NSArray arrayWithObjects:@"ae2f7740d94b1d3be529b0959e8893d7", @"GAD_SIMULATOR_ID", nil];
-        [bannerView_ loadRequest:request];
-    
-        interstitial_ = [[GADInterstitial alloc] init];
-        interstitial_.adUnitID = @"da932c2478bf4b41";
-        [interstitial_ setDelegate:self];
-        [interstitial_ loadRequest:request];
+        if (otherAdTracker == 1) {
+            otherAdTracker = 0;
+        } else {
+            [self.adView loadAd];
+            [self.interstitial loadAd];
+        }
     }
     
     // Creating navigation bar
@@ -114,11 +127,11 @@
     
     // ADS
     if ([MKStoreManager isFeaturePurchased:@"removeAds"]) {
-        [bannerView_ setHidden:YES];
-        [bannerView_ setAlpha:0];
-        [bannerView_ removeFromSuperview];
-        bannerView_ = NULL;
-        interstitial_ = NULL;
+        [self.adView setHidden:YES];
+        [self.adView setAlpha:0];
+        [self.adView removeFromSuperview];
+        self.adView = NULL;
+        self.interstitial = NULL;
         [removeAdButton setHidden:YES];
         [removeAdButton removeFromSuperview];
         removeAdButton.frame = CGRectMake(0, 0, 0, 0);
@@ -135,9 +148,8 @@
 }
 
 -(IBAction)goBack {
-    if (interstitial_.isReady) {
-        // Show ad
-        [interstitial_ presentFromRootViewController:self];
+    if (self.interstitial.ready) {
+        [self.interstitial showFromViewController:self];
     } else {
         [self leaveView];
     }
@@ -151,11 +163,11 @@
          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No more ads for you!" message:@"You have successfully removed advertisements from\nNever Have I Ever!\nEnjoy!" delegate:self cancelButtonTitle:@"Done!" otherButtonTitles:nil, nil];
          [alert show];
          NSLog(@"Purchased: %@", purchasedFeature);
-         [bannerView_ setHidden:YES];
-         [bannerView_ setAlpha:0];
-         [bannerView_ removeFromSuperview];
-         bannerView_ = NULL;
-         interstitial_ = NULL;
+         [self.adView setHidden:YES];
+         [self.adView setAlpha:0];
+         [self.adView removeFromSuperview];
+         self.adView = NULL;
+         self.interstitial = NULL;
          [removeAdButton setHidden:YES];
          [removeAdButton removeFromSuperview];
          removeAdButton.frame = CGRectMake(0, 0, 0, 0);
@@ -167,41 +179,105 @@
      }];
 }
 
-// ADMOB METHODS
--(void)adViewDidReceiveAd:(GADBannerView *)view {
-    NSLog(@"Showing AdMob Ad");
-    [bannerView_ setHidden:NO];
-    [UIView beginAnimations:@"BannerSlide" context:nil];
-    bannerView_.frame = CGRectMake(0, self.view.frame.size.height - bannerView_.frame.size.height, bannerView_.frame.size.width, bannerView_.frame.size.height);
-    [UIView commitAnimations];
+// MoPub Banner
+-(UIViewController *)viewControllerForPresentingModalView {
+    return self;
 }
 
--(void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
-    NSLog(@"AdMob banner error: %@", error);
-    [bannerView_ setHidden:YES];
+-(void)adViewDidLoadAd:(MPAdView *)view {
+    NSLog(@"MoPub ad loaded");
+    CGSize size = [view adContentViewSize];
+    CGFloat centeredX = (self.view.bounds.size.width - size.width) / 2;
+    CGFloat bottomAlignedY = self.view.bounds.size.height - size.height;
+    view.frame = CGRectMake(centeredX, bottomAlignedY, size.width, size.height);
+    [self.adView setHidden:NO];
 }
 
--(void)interstitialDidReceiveAd:(GADInterstitial *)ad {
-    NSLog(@"Received full screen ad");
+-(void)adViewDidFailToLoadAd:(MPAdView *)view {
+    NSLog(@"MoPub ad failed to load");
+    [self.adView setHidden:YES];
 }
 
+-(void)willPresentModalViewForAd:(MPAdView *)view {
+    NSLog(@"MoPub ad has been clicked");
+}
+
+-(void)didDismissModalViewForAd:(MPAdView *)view {
+    NSLog(@"MoPub ad was closed");
+}
+
+-(void)willLeaveApplicationFromAd:(MPAdView *)view {
+    NSLog(@"MoPub leaving app");
+}
+
+// MoPub Interstitial
+-(void)interstitialDidLoadAd:(MPInterstitialAdController *)interstitial {
+    NSLog(@"MoPub Full Screen ad loaded");
+}
+
+-(void)interstitialDidFailToLoadAd:(MPInterstitialAdController *)interstitial {
+    NSLog(@"MoPub Full Screen ad failed to load");
+}
+
+-(void)interstitialWillAppear:(MPInterstitialAdController *)interstitial {
+    NSLog(@"MoPub Full Screen ad about to appear");
+    adTracker = 1;
+}
+
+-(void)interstitialWillDisappear:(MPInterstitialAdController *)interstitial {
+    NSLog(@"MoPub Full Screen ad about to disappear");
+}
+
+-(void)interstitialDidAppear:(MPInterstitialAdController *)interstitial {
+    NSLog(@"MoPub Full Screen ad appeared");
+}
+
+-(void)interstitialDidDisappear:(MPInterstitialAdController *)interstitialView {
+    NSLog(@"MoPub Full Screen ad disappeared");
+    if (![self.presentedViewController isBeingDismissed]) {
+        [self leaveView];
+    }
+}
+
+/*
+-(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didHide:(NSString *)lastViewedNetwork {
+    NSLog(@"Burstly ad hidden with network: %@", lastViewedNetwork);
+}
+
+-(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didShow:(NSString *)adNetwork {
+    NSLog(@"Burstly ad shown with network: %@", adNetwork);
+    [self.banner setHidden:NO];
+}
+
+-(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didCache:(NSString *)adNetwork {
+    NSLog(@"Burstly ad pre-cached with network: %@", adNetwork);
+}
+
+-(void)burstlyBannerAdView:(BurstlyBannerAdView *)view wasClicked:(NSString *)adNetwork {
+    NSLog(@"Burstly ad was clicked with network: %@", adNetwork);
+}
+
+-(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didFailWithError:(NSError *)error {
+    NSLog(@"Burstly ad failed with error: %@", error);
+    [self.banner setHidden:YES];
+}
+ */
+
+/*
 -(void)interstitialWillDismissScreen:(GADInterstitial *)ad {
     NSLog(@"Dismissed full screen ad");
     adTracker = 1;
 }
+ */
 
 -(void)leaveView {
     questionLabel.text = @"";
     navigationBar.topItem.title = @"";
-    [bannerView_ setHidden:YES];
+    [self.adView stopAutomaticallyRefreshingContents];
+    [self.adView setHidden:YES];
     [questionArray removeAllObjects];
     [self resignFirstResponder];
     [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
--(void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
-    NSLog(@"AdMob Full error: %@", error);
-    //[self leaveView];
 }
 
 -(void)setAdTracker:(int)tracker {
