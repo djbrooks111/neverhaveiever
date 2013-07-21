@@ -154,6 +154,8 @@
     
     [menu removeFromSuperview];
     
+    [Flurry logEvent:[NSString stringWithFormat:@"Selected %@", categoryString]];
+    
     // Go to next view
     [self presentViewController:questionView animated:YES completion:NULL];
 }

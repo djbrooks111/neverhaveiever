@@ -12,6 +12,7 @@
 #import "MKStoreManager.h"
 #import "MPAdView.h"
 #import "MPInterstitialAdController.h"
+#import "Flurry.h"
 
 @interface QuestionViewController : UIViewController <MPAdViewDelegate, MPInterstitialAdControllerDelegate> {
     IBOutlet UINavigationBar *navigationBar;

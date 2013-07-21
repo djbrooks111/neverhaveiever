@@ -149,6 +149,7 @@
 
 -(IBAction)goBack {
     if (self.interstitial.ready) {
+        [Flurry logEvent:@"Full Screen Ad Shown"];
         [self.interstitial showFromViewController:self];
     } else {
         [self leaveView];
@@ -186,6 +187,7 @@
 
 -(void)adViewDidLoadAd:(MPAdView *)view {
     NSLog(@"MoPub ad loaded");
+    [Flurry logEvent:@"Banner Ad Shown"];
     CGSize size = [view adContentViewSize];
     CGFloat centeredX = (self.view.bounds.size.width - size.width) / 2;
     CGFloat bottomAlignedY = self.view.bounds.size.height - size.height;
@@ -195,6 +197,7 @@
 
 -(void)adViewDidFailToLoadAd:(MPAdView *)view {
     NSLog(@"MoPub ad failed to load");
+    [Flurry logEvent:@"Banner Ad Failed To Load"];
     [self.adView setHidden:YES];
 }
 
@@ -217,6 +220,7 @@
 
 -(void)interstitialDidFailToLoadAd:(MPInterstitialAdController *)interstitial {
     NSLog(@"MoPub Full Screen ad failed to load");
+    [Flurry logEvent:@"Full Screen Ad Failed To Load"];
 }
 
 -(void)interstitialWillAppear:(MPInterstitialAdController *)interstitial {
