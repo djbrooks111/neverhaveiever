@@ -61,6 +61,8 @@
         backgroundImageView.frame = CGRectMake(0, navigationBar.frame.size.height, DEVICE_WIDTH, TALL_IPHONE_HEIGHT - navigationBar.frame.size.height);
     }
     
+    navigationBar.frame = CGRectMake(0, 0, navigationBar.frame.size.width, navigationBar.frame.size.height);
+    
     [self.view addSubview:backgroundImageView];
     [self.view sendSubviewToBack:backgroundImageView];
 }

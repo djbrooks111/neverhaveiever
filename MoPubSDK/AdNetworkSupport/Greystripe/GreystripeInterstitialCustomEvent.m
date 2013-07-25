@@ -28,7 +28,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // This is a sample Greystripe GUID. You will need to replace it with your Greystripe GUID.
-#define kGreystripeGUID @"YOUR_GREYSTRIPE_GUID"
+#define kGreystripeGUID @"39b8e419-e7f3-4c8c-8c05-ca0d3ad9e567"
 
 @interface GreystripeInterstitialCustomEvent ()
 
