@@ -57,7 +57,7 @@
         // SHOW ADS
         // MoPub
         self.adView = [[MPAdView alloc] initWithAdUnitId:@"6f71e4b432744296a12deede3df084a3" size:MOPUB_BANNER_SIZE];
-        self.adView.testing = YES;
+        self.adView.testing = NO;
         self.adView.delegate = self;
         [self.adView startAutomaticallyRefreshingContents];
         CGRect frame = self.adView.frame;
@@ -68,7 +68,7 @@
         [self.adView loadAd];
         
         self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"b58296ef5de043a6be0270ee5ff35a4e"];
-        self.interstitial.testing = YES;
+        self.interstitial.testing = NO;
         self.interstitial.delegate = self;
         [self.interstitial loadAd];
         
