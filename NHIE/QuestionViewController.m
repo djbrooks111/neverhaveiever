@@ -145,6 +145,7 @@
     
     questionLabel.text = @"";
     [questionArray removeAllObjects];
+    indexTracker = -1;
     
     // Getting questions
     [self showProgressView];
@@ -246,37 +247,6 @@
     }
 }
 
-/*
--(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didHide:(NSString *)lastViewedNetwork {
-    NSLog(@"Burstly ad hidden with network: %@", lastViewedNetwork);
-}
-
--(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didShow:(NSString *)adNetwork {
-    NSLog(@"Burstly ad shown with network: %@", adNetwork);
-    [self.banner setHidden:NO];
-}
-
--(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didCache:(NSString *)adNetwork {
-    NSLog(@"Burstly ad pre-cached with network: %@", adNetwork);
-}
-
--(void)burstlyBannerAdView:(BurstlyBannerAdView *)view wasClicked:(NSString *)adNetwork {
-    NSLog(@"Burstly ad was clicked with network: %@", adNetwork);
-}
-
--(void)burstlyBannerAdView:(BurstlyBannerAdView *)view didFailWithError:(NSError *)error {
-    NSLog(@"Burstly ad failed with error: %@", error);
-    [self.banner setHidden:YES];
-}
- */
-
-/*
--(void)interstitialWillDismissScreen:(GADInterstitial *)ad {
-    NSLog(@"Dismissed full screen ad");
-    adTracker = 1;
-}
- */
-
 -(void)leaveView {
     questionLabel.text = @"";
     navigationBar.topItem.title = @"";
@@ -302,6 +272,8 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         // DO STUFF
         [self getQuestions];
+        sleep(1);
+        [self shuffleQuestions];
         sleep(1);
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -329,7 +301,7 @@
 -(void)shuffleQuestions {
     for (int i = 0; i < [questionArray count]; i++) {
         NSString *neededString = [questionArray objectAtIndex:i];
-        neededString = [neededString stringByReplacingOccurrencesOfString:@"=" withString:@"\r"];
+        neededString = [neededString stringByReplacingOccurrencesOfString:@"=" withString:@"\n"];
         [questionArray removeObjectAtIndex:i];
         [questionArray insertObject:neededString atIndex:i];
     }
@@ -346,7 +318,7 @@
 -(void)displayQuestion {
     indexTracker++;
     
-    if (indexTracker == [questionArray count] - 1) {
+    if (indexTracker == [questionArray count]) {
         [self shuffleQuestions];
         indexTracker = 0;
     }
