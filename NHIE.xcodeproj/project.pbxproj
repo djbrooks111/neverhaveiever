@@ -68,8 +68,6 @@
 		269D7C2C17443FD60036511A /* SchoolPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 269D7C2617443FD60036511A /* SchoolPhrases.txt */; };
 		269D7C2D17443FD60036511A /* WorkPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 269D7C2717443FD60036511A /* WorkPhrases.txt */; };
 		269D7C6417443FE90036511A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 269D7C6317443FE90036511A /* MBProgressHUD.m */; };
-		269D7C6917443FF10036511A /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 269D7C6617443FF10036511A /* AwesomeMenu.m */; };
-		269D7C6A17443FF10036511A /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 269D7C6817443FF10036511A /* AwesomeMenuItem.m */; };
 		269D7C6C174440110036511A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7C6B174440110036511A /* QuartzCore.framework */; };
 		269D7C701744401C0036511A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7C6F1744401C0036511A /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		269D7C72174440200036511A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7C71174440200036511A /* AudioToolbox.framework */; };
@@ -247,10 +245,6 @@
 		269D7C2717443FD60036511A /* WorkPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WorkPhrases.txt; path = ../WorkPhrases.txt; sourceTree = "<group>"; };
 		269D7C6217443FE90036511A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		269D7C6317443FE90036511A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		269D7C6517443FF10036511A /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
-		269D7C6617443FF10036511A /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
-		269D7C6717443FF10036511A /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
-		269D7C6817443FF10036511A /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
 		269D7C6B174440110036511A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		269D7C6F1744401C0036511A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		269D7C71174440200036511A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -488,7 +482,6 @@
 				269D7BFF17443F780036511A /* MKStoreKit */,
 				269D7C0217443F890036511A /* Images */,
 				269D7C0317443F8E0036511A /* MBProgressHUD */,
-				269D7C0417443F950036511A /* AwesomeMenu */,
 				269D7BD517443CF50036511A /* NHIE */,
 				269D7BCE17443CF50036511A /* Frameworks */,
 				269D7BCD17443CF50036511A /* Products */,
@@ -646,17 +639,6 @@
 				269D7C6317443FE90036511A /* MBProgressHUD.m */,
 			);
 			name = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		269D7C0417443F950036511A /* AwesomeMenu */ = {
-			isa = PBXGroup;
-			children = (
-				269D7C6517443FF10036511A /* AwesomeMenu.h */,
-				269D7C6617443FF10036511A /* AwesomeMenu.m */,
-				269D7C6717443FF10036511A /* AwesomeMenuItem.h */,
-				269D7C6817443FF10036511A /* AwesomeMenuItem.m */,
-			);
-			name = AwesomeMenu;
 			sourceTree = "<group>";
 		};
 		26BD51761799FD9500A3B32C /* MoPubSDK */ = {
@@ -1116,8 +1098,6 @@
 				269D7BF917443E680036511A /* DataStorage.m in Sources */,
 				269D7BFD17443EBC0036511A /* QuestionViewController.m in Sources */,
 				269D7C6417443FE90036511A /* MBProgressHUD.m in Sources */,
-				269D7C6917443FF10036511A /* AwesomeMenu.m in Sources */,
-				269D7C6A17443FF10036511A /* AwesomeMenuItem.m in Sources */,
 				2690409C175177B5004EA055 /* AboutViewController.m in Sources */,
 				26C48449178A25AB00DDD368 /* NSData+MKBase64.m in Sources */,
 				26C4844A178A25AB00DDD368 /* SFHFKeychainUtils.m in Sources */,

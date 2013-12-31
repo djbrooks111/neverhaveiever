@@ -64,58 +64,17 @@
 }
 
 -(void)createMenuView {
-    AwesomeMenuItem *dirtySexItem = [[AwesomeMenuItem alloc]
-                                     initWithImage:[UIImage imageNamed:@"Dirty.png"]
-                                     highlightedImage:nil
-                                     ContentImage:[UIImage imageNamed:@"Dirty.png"]
-                                     highlightedContentImage:nil];
-    AwesomeMenuItem *schoolItem = [[AwesomeMenuItem alloc]
-                                   initWithImage:[UIImage imageNamed:@"School.png"]
-                                   highlightedImage:nil
-                                   ContentImage:[UIImage imageNamed:@"School.png"]
-                                   highlightedContentImage:nil];
-    AwesomeMenuItem *relationshipsItem = [[AwesomeMenuItem alloc]
-                                          initWithImage:[UIImage imageNamed:@"Relationships.png"]
-                                          highlightedImage:nil
-                                          ContentImage:[UIImage imageNamed:@"Relationships.png"]
-                                          highlightedContentImage:nil];
-    AwesomeMenuItem *workItem = [[AwesomeMenuItem alloc]
-                                 initWithImage:[UIImage imageNamed:@"Work.png"]
-                                 highlightedImage:nil
-                                 ContentImage:[UIImage imageNamed:@"Work.png"]
-                                 highlightedContentImage:nil];
-    AwesomeMenuItem *drinkingItem = [[AwesomeMenuItem alloc]
-                                     initWithImage:[UIImage imageNamed:@"Drinking.png"]
-                                     highlightedImage:nil
-                                     ContentImage:[UIImage imageNamed:@"Drinking.png"]
-                                     highlightedContentImage:nil];
-    AwesomeMenuItem *randomItem = [[AwesomeMenuItem alloc]
-                                   initWithImage:[UIImage imageNamed:@"Random.png"]
-                                   highlightedImage:nil
-                                   ContentImage:[UIImage imageNamed:@"Random.png"]
-                                   highlightedContentImage:nil];
-    
-    NSArray *menuOptions = [NSArray arrayWithObjects:dirtySexItem, schoolItem, relationshipsItem, workItem, drinkingItem, randomItem, nil];
-    
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.frame menus:menuOptions];
-    menu.delegate = self;
-    
-    
     if (IS_SHORT_IPHONE) {
         // iPhone 4S
-        menu.frame = CGRectMake(DEVICE_WIDTH/2 - menu.frame.size.width/2, SHORT_IPHONE_HEIGHT/2 - menu.frame.size.height/2, menu.frame.size.width, menu.frame.size.height);
     } else if (IS_TALL_IPHONE) {
         // iPhone 5
-        menu.frame = CGRectMake(DEVICE_WIDTH/2 - menu.frame.size.width/2, TALL_IPHONE_HEIGHT/2 - menu.frame.size.height/2 + 50, menu.frame.size.width, menu.frame.size.height);
     }
-    
-    [self.view addSubview:menu];
 }
 
--(void)AwesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
-    NSLog(@"User selected index: %d", idx);
+-(IBAction)categoryButtonClicked:(UIButton *)sender {
+    NSLog(@"User selected button tag: %d", sender.tag);
     
-    switch (idx) {
+    switch (sender.tag) {
         case 0:
             categoryString = @"Dirty & Sex";
             urlString = @"DirtyAndSexPhrases";
@@ -149,8 +108,6 @@
         default:
             break;
     }
-    
-    [menu removeFromSuperview];
     
     [Flurry logEvent:[NSString stringWithFormat:@"Selected %@", categoryString]];
     

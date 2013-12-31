@@ -9,11 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "QuestionViewController.h"
 #import "DataStorage.h"
-#import "AwesomeMenu.h"
 #import "AboutViewController.h"
 #import "Flurry.h"
 
-@interface ViewController : UIViewController <AwesomeMenuDelegate> {
+@interface ViewController : UIViewController {
     IBOutlet UINavigationBar *navigationBar;
     IBOutlet QuestionViewController *questionView;
     IBOutlet AboutViewController *aboutView;
