@@ -16,6 +16,17 @@
     IBOutlet UINavigationBar *navigationBar;
     IBOutlet QuestionViewController *questionView;
     IBOutlet AboutViewController *aboutView;
+    
+    // Category Buttons
+    IBOutlet UIButton *dirtySexButton;
+    IBOutlet UIButton *schoolButton;
+    IBOutlet UIButton *relationshipsButton;
+    IBOutlet UIButton *workButton;
+    IBOutlet UIButton *drinkingButton;
+    IBOutlet UIButton *randomButton;
+    
 }
+
+- (IBAction)categoryButtonClicked:(UIButton *)button;
 
 @end

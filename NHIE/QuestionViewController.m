@@ -104,8 +104,6 @@
     
     [self.view addSubview:backgroundImageView];
     [self.view sendSubviewToBack:backgroundImageView];
-    
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:186/255.0 green:190/255.0 blue:190/255.0 alpha:1.0]];
 }
 
 -(void)viewDidAppear:(BOOL)animated {

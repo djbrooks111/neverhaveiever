@@ -16,25 +16,11 @@
 		260A43CC175197040016FCED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43AD175197040016FCED /* Default-568h@2x.png */; };
 		260A43CD175197040016FCED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43AE175197040016FCED /* Default.png */; };
 		260A43CE175197040016FCED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43AF175197040016FCED /* Default@2x.png */; };
-		260A43CF175197040016FCED /* Dirty.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B0175197040016FCED /* Dirty.png */; };
-		260A43D0175197040016FCED /* Dirty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B1175197040016FCED /* Dirty@2x.png */; };
-		260A43D1175197040016FCED /* Drinking.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B2175197040016FCED /* Drinking.png */; };
-		260A43D2175197040016FCED /* Drinking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B3175197040016FCED /* Drinking@2x.png */; };
-		260A43D3175197040016FCED /* MainLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B4175197040016FCED /* MainLogo.png */; };
-		260A43D4175197040016FCED /* MainLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B5175197040016FCED /* MainLogo@2x.png */; };
 		260A43D5175197040016FCED /* QuestionBackground-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B6175197040016FCED /* QuestionBackground-568h@2x.png */; };
 		260A43D6175197040016FCED /* QuestionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B7175197040016FCED /* QuestionBackground.png */; };
 		260A43D7175197040016FCED /* QuestionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43B8175197040016FCED /* QuestionBackground@2x.png */; };
 		260A43D9175197040016FCED /* QuestionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43BA175197040016FCED /* QuestionButton.png */; };
 		260A43DA175197040016FCED /* QuestionButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43BB175197040016FCED /* QuestionButton@2x.png */; };
-		260A43DB175197040016FCED /* Random.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43BC175197040016FCED /* Random.png */; };
-		260A43DC175197040016FCED /* Random@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43BD175197040016FCED /* Random@2x.png */; };
-		260A43DD175197040016FCED /* Relationships.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43BE175197040016FCED /* Relationships.png */; };
-		260A43DE175197040016FCED /* Relationships@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43BF175197040016FCED /* Relationships@2x.png */; };
-		260A43E1175197040016FCED /* School.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43C2175197040016FCED /* School.png */; };
-		260A43E2175197040016FCED /* School@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43C3175197040016FCED /* School@2x.png */; };
-		260A43E3175197040016FCED /* Work.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43C4175197040016FCED /* Work.png */; };
-		260A43E4175197040016FCED /* Work@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43C5175197040016FCED /* Work@2x.png */; };
 		260A43E71751979A0016FCED /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43E5175197990016FCED /* Icon.png */; };
 		260A43E81751979A0016FCED /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 260A43E6175197990016FCED /* Icon@2x.png */; };
 		260FFAF9178A15C70052D72B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260FFAF8178A15C70052D72B /* CoreLocation.framework */; };
@@ -48,6 +34,18 @@
 		260FFB1B178A18D60052D72B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260FFB1A178A18D60052D72B /* iAd.framework */; };
 		26105547179A39F8005362BC /* libGreystripeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26105546179A39F8005362BC /* libGreystripeSDK.a */; };
 		26105548179A3A22005362BC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD51741799EAD100A3B32C /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2632919A18728BAA00ACEDF1 /* DirtySexButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632918C18728BAA00ACEDF1 /* DirtySexButton.png */; };
+		2632919B18728BAA00ACEDF1 /* DirtySexButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632918D18728BAA00ACEDF1 /* DirtySexButton@2x.png */; };
+		2632919C18728BAA00ACEDF1 /* DrinkingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632918E18728BAA00ACEDF1 /* DrinkingButton.png */; };
+		2632919D18728BAA00ACEDF1 /* DrinkingButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632918F18728BAA00ACEDF1 /* DrinkingButton@2x.png */; };
+		2632919E18728BAA00ACEDF1 /* RandomButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919018728BAA00ACEDF1 /* RandomButton.png */; };
+		2632919F18728BAA00ACEDF1 /* RandomButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919118728BAA00ACEDF1 /* RandomButton@2x.png */; };
+		263291A018728BAA00ACEDF1 /* RelationshipsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919218728BAA00ACEDF1 /* RelationshipsButton.png */; };
+		263291A118728BAA00ACEDF1 /* RelationshipsButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919318728BAA00ACEDF1 /* RelationshipsButton@2x.png */; };
+		263291A218728BAA00ACEDF1 /* SchoolButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919418728BAA00ACEDF1 /* SchoolButton.png */; };
+		263291A318728BAA00ACEDF1 /* SchoolButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919518728BAA00ACEDF1 /* SchoolButton@2x.png */; };
+		263291A618728BAA00ACEDF1 /* WorkButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919818728BAA00ACEDF1 /* WorkButton.png */; };
+		263291A718728BAA00ACEDF1 /* WorkButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919918728BAA00ACEDF1 /* WorkButton@2x.png */; };
 		2672679A179C6AAC008FBA80 /* libFlurry_4.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26726799179C6AAC008FBA80 /* libFlurry_4.2.2.a */; };
 		2690409C175177B5004EA055 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2690409A175177B5004EA055 /* AboutViewController.m */; };
 		2690409D175177B5004EA055 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2690409B175177B5004EA055 /* AboutViewController.xib */; };
@@ -176,25 +174,11 @@
 		260A43AD175197040016FCED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		260A43AE175197040016FCED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		260A43AF175197040016FCED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		260A43B0175197040016FCED /* Dirty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dirty.png; sourceTree = "<group>"; };
-		260A43B1175197040016FCED /* Dirty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dirty@2x.png"; sourceTree = "<group>"; };
-		260A43B2175197040016FCED /* Drinking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Drinking.png; sourceTree = "<group>"; };
-		260A43B3175197040016FCED /* Drinking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drinking@2x.png"; sourceTree = "<group>"; };
-		260A43B4175197040016FCED /* MainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogo.png; sourceTree = "<group>"; };
-		260A43B5175197040016FCED /* MainLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainLogo@2x.png"; sourceTree = "<group>"; };
 		260A43B6175197040016FCED /* QuestionBackground-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionBackground-568h@2x.png"; sourceTree = "<group>"; };
 		260A43B7175197040016FCED /* QuestionBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuestionBackground.png; sourceTree = "<group>"; };
 		260A43B8175197040016FCED /* QuestionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionBackground@2x.png"; sourceTree = "<group>"; };
 		260A43BA175197040016FCED /* QuestionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuestionButton.png; sourceTree = "<group>"; };
 		260A43BB175197040016FCED /* QuestionButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuestionButton@2x.png"; sourceTree = "<group>"; };
-		260A43BC175197040016FCED /* Random.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Random.png; sourceTree = "<group>"; };
-		260A43BD175197040016FCED /* Random@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Random@2x.png"; sourceTree = "<group>"; };
-		260A43BE175197040016FCED /* Relationships.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Relationships.png; sourceTree = "<group>"; };
-		260A43BF175197040016FCED /* Relationships@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Relationships@2x.png"; sourceTree = "<group>"; };
-		260A43C2175197040016FCED /* School.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = School.png; sourceTree = "<group>"; };
-		260A43C3175197040016FCED /* School@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "School@2x.png"; sourceTree = "<group>"; };
-		260A43C4175197040016FCED /* Work.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Work.png; sourceTree = "<group>"; };
-		260A43C5175197040016FCED /* Work@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Work@2x.png"; sourceTree = "<group>"; };
 		260A43E5175197990016FCED /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		260A43E6175197990016FCED /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		260FFAF8178A15C70052D72B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -215,6 +199,18 @@
 		26105544179A39F8005362BC /* GSMobileBannerAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMobileBannerAdView.h; sourceTree = "<group>"; };
 		26105545179A39F8005362BC /* GSSDKInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSDKInfo.h; sourceTree = "<group>"; };
 		26105546179A39F8005362BC /* libGreystripeSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGreystripeSDK.a; sourceTree = "<group>"; };
+		2632918C18728BAA00ACEDF1 /* DirtySexButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DirtySexButton.png; sourceTree = "<group>"; };
+		2632918D18728BAA00ACEDF1 /* DirtySexButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DirtySexButton@2x.png"; sourceTree = "<group>"; };
+		2632918E18728BAA00ACEDF1 /* DrinkingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DrinkingButton.png; sourceTree = "<group>"; };
+		2632918F18728BAA00ACEDF1 /* DrinkingButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DrinkingButton@2x.png"; sourceTree = "<group>"; };
+		2632919018728BAA00ACEDF1 /* RandomButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RandomButton.png; sourceTree = "<group>"; };
+		2632919118728BAA00ACEDF1 /* RandomButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RandomButton@2x.png"; sourceTree = "<group>"; };
+		2632919218728BAA00ACEDF1 /* RelationshipsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RelationshipsButton.png; sourceTree = "<group>"; };
+		2632919318728BAA00ACEDF1 /* RelationshipsButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RelationshipsButton@2x.png"; sourceTree = "<group>"; };
+		2632919418728BAA00ACEDF1 /* SchoolButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SchoolButton.png; sourceTree = "<group>"; };
+		2632919518728BAA00ACEDF1 /* SchoolButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SchoolButton@2x.png"; sourceTree = "<group>"; };
+		2632919818728BAA00ACEDF1 /* WorkButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WorkButton.png; sourceTree = "<group>"; };
+		2632919918728BAA00ACEDF1 /* WorkButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WorkButton@2x.png"; sourceTree = "<group>"; };
 		26726798179C6AAC008FBA80 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		26726799179C6AAC008FBA80 /* libFlurry_4.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.2.a; sourceTree = "<group>"; };
 		26904099175177B5004EA055 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -609,25 +605,23 @@
 				260A43AD175197040016FCED /* Default-568h@2x.png */,
 				260A43AE175197040016FCED /* Default.png */,
 				260A43AF175197040016FCED /* Default@2x.png */,
-				260A43B0175197040016FCED /* Dirty.png */,
-				260A43B1175197040016FCED /* Dirty@2x.png */,
-				260A43B2175197040016FCED /* Drinking.png */,
-				260A43B3175197040016FCED /* Drinking@2x.png */,
-				260A43B4175197040016FCED /* MainLogo.png */,
-				260A43B5175197040016FCED /* MainLogo@2x.png */,
 				260A43B6175197040016FCED /* QuestionBackground-568h@2x.png */,
 				260A43B7175197040016FCED /* QuestionBackground.png */,
 				260A43B8175197040016FCED /* QuestionBackground@2x.png */,
 				260A43BA175197040016FCED /* QuestionButton.png */,
 				260A43BB175197040016FCED /* QuestionButton@2x.png */,
-				260A43BC175197040016FCED /* Random.png */,
-				260A43BD175197040016FCED /* Random@2x.png */,
-				260A43BE175197040016FCED /* Relationships.png */,
-				260A43BF175197040016FCED /* Relationships@2x.png */,
-				260A43C2175197040016FCED /* School.png */,
-				260A43C3175197040016FCED /* School@2x.png */,
-				260A43C4175197040016FCED /* Work.png */,
-				260A43C5175197040016FCED /* Work@2x.png */,
+				2632918C18728BAA00ACEDF1 /* DirtySexButton.png */,
+				2632918D18728BAA00ACEDF1 /* DirtySexButton@2x.png */,
+				2632918E18728BAA00ACEDF1 /* DrinkingButton.png */,
+				2632918F18728BAA00ACEDF1 /* DrinkingButton@2x.png */,
+				2632919018728BAA00ACEDF1 /* RandomButton.png */,
+				2632919118728BAA00ACEDF1 /* RandomButton@2x.png */,
+				2632919218728BAA00ACEDF1 /* RelationshipsButton.png */,
+				2632919318728BAA00ACEDF1 /* RelationshipsButton@2x.png */,
+				2632919418728BAA00ACEDF1 /* SchoolButton.png */,
+				2632919518728BAA00ACEDF1 /* SchoolButton@2x.png */,
+				2632919818728BAA00ACEDF1 /* WorkButton.png */,
+				2632919918728BAA00ACEDF1 /* WorkButton@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -1017,15 +1011,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263291A618728BAA00ACEDF1 /* WorkButton.png in Resources */,
+				2632919E18728BAA00ACEDF1 /* RandomButton.png in Resources */,
+				263291A118728BAA00ACEDF1 /* RelationshipsButton@2x.png in Resources */,
 				269D7BDA17443CF50036511A /* InfoPlist.strings in Resources */,
 				269D7C1517443FC10036511A /* MKStoreKitConfigs.plist in Resources */,
+				2632919F18728BAA00ACEDF1 /* RandomButton@2x.png in Resources */,
 				269D7C2817443FD60036511A /* DirtyAndSexPhrases.txt in Resources */,
 				269D7C2917443FD60036511A /* DrinkingPhrases.txt in Resources */,
 				269D7C2A17443FD60036511A /* RandomPhrases.txt in Resources */,
 				269D7C2B17443FD60036511A /* RelationshipsPhrases.txt in Resources */,
 				269D7C2C17443FD60036511A /* SchoolPhrases.txt in Resources */,
 				269D7C2D17443FD60036511A /* WorkPhrases.txt in Resources */,
+				263291A218728BAA00ACEDF1 /* SchoolButton.png in Resources */,
 				269D7C7F174441210036511A /* ViewController.xib in Resources */,
+				2632919C18728BAA00ACEDF1 /* DrinkingButton.png in Resources */,
 				269D7C80174441210036511A /* QuestionViewController.xib in Resources */,
 				2690409D175177B5004EA055 /* AboutViewController.xib in Resources */,
 				260A43C6175197040016FCED /* AboutBackground-568h@2x.png in Resources */,
@@ -1034,28 +1034,20 @@
 				260A43C9175197040016FCED /* CategoryBackground-568h@2x.png in Resources */,
 				260A43CA175197040016FCED /* CategoryBackground.png in Resources */,
 				260A43CB175197040016FCED /* CategoryBackground@2x.png in Resources */,
+				2632919B18728BAA00ACEDF1 /* DirtySexButton@2x.png in Resources */,
+				263291A018728BAA00ACEDF1 /* RelationshipsButton.png in Resources */,
+				263291A718728BAA00ACEDF1 /* WorkButton@2x.png in Resources */,
+				2632919D18728BAA00ACEDF1 /* DrinkingButton@2x.png in Resources */,
 				260A43CC175197040016FCED /* Default-568h@2x.png in Resources */,
 				260A43CD175197040016FCED /* Default.png in Resources */,
 				260A43CE175197040016FCED /* Default@2x.png in Resources */,
-				260A43CF175197040016FCED /* Dirty.png in Resources */,
-				260A43D0175197040016FCED /* Dirty@2x.png in Resources */,
-				260A43D1175197040016FCED /* Drinking.png in Resources */,
-				260A43D2175197040016FCED /* Drinking@2x.png in Resources */,
-				260A43D3175197040016FCED /* MainLogo.png in Resources */,
-				260A43D4175197040016FCED /* MainLogo@2x.png in Resources */,
 				260A43D5175197040016FCED /* QuestionBackground-568h@2x.png in Resources */,
+				2632919A18728BAA00ACEDF1 /* DirtySexButton.png in Resources */,
 				260A43D6175197040016FCED /* QuestionBackground.png in Resources */,
 				260A43D7175197040016FCED /* QuestionBackground@2x.png in Resources */,
 				260A43D9175197040016FCED /* QuestionButton.png in Resources */,
 				260A43DA175197040016FCED /* QuestionButton@2x.png in Resources */,
-				260A43DB175197040016FCED /* Random.png in Resources */,
-				260A43DC175197040016FCED /* Random@2x.png in Resources */,
-				260A43DD175197040016FCED /* Relationships.png in Resources */,
-				260A43DE175197040016FCED /* Relationships@2x.png in Resources */,
-				260A43E1175197040016FCED /* School.png in Resources */,
-				260A43E2175197040016FCED /* School@2x.png in Resources */,
-				260A43E3175197040016FCED /* Work.png in Resources */,
-				260A43E4175197040016FCED /* Work@2x.png in Resources */,
+				263291A318728BAA00ACEDF1 /* SchoolButton@2x.png in Resources */,
 				260A43E71751979A0016FCED /* Icon.png in Resources */,
 				260A43E81751979A0016FCED /* Icon@2x.png in Resources */,
 				26BD52361799FD9500A3B32C /* README.md in Resources */,

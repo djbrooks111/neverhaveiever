@@ -66,15 +66,35 @@
 -(void)createMenuView {
     if (IS_SHORT_IPHONE) {
         // iPhone 4S
+        dirtySexButton.frame = CGRectMake(21, 81, 278, 45);
+        schoolButton.frame = CGRectMake(21, 146, 278, 45);
+        relationshipsButton.frame = CGRectMake(21, 211, 278, 45);
+        workButton.frame = CGRectMake(21, 276, 278, 45);
+        drinkingButton.frame = CGRectMake(21, 341, 278, 45);
+        randomButton.frame = CGRectMake(21, 406, 278, 45);
     } else if (IS_TALL_IPHONE) {
         // iPhone 5
+        dirtySexButton.frame = CGRectMake(21, 121, 278, 45);
+        schoolButton.frame = CGRectMake(21, 186, 278, 45);
+        relationshipsButton.frame = CGRectMake(21, 251, 278, 45);
+        workButton.frame = CGRectMake(21, 316, 278, 45);
+        drinkingButton.frame = CGRectMake(21, 381, 278, 45);
+        randomButton.frame = CGRectMake(21, 446, 278, 45);
     }
+    
+    // Setting button images
+    [dirtySexButton setImage:[UIImage imageNamed:@"DirtySexButton.png"] forState:UIControlStateNormal];
+    [schoolButton setImage:[UIImage imageNamed:@"SchoolButton.png"] forState:UIControlStateNormal];
+    [relationshipsButton setImage:[UIImage imageNamed:@"RelationshipsButton.png"] forState:UIControlStateNormal];
+    [workButton setImage:[UIImage imageNamed:@"WorkButton.png"] forState:UIControlStateNormal];
+    [drinkingButton setImage:[UIImage imageNamed:@"DrinkingButton.png"] forState:UIControlStateNormal];
+    [randomButton setImage:[UIImage imageNamed:@"RandomButton.png"] forState:UIControlStateNormal];
 }
 
--(IBAction)categoryButtonClicked:(UIButton *)sender {
-    NSLog(@"User selected button tag: %d", sender.tag);
+-(IBAction)categoryButtonClicked:(UIButton *)button {
+    NSLog(@"User selected button tag: %d", button.tag);
     
-    switch (sender.tag) {
+    switch (button.tag) {
         case 0:
             categoryString = @"Dirty & Sex";
             urlString = @"DirtyAndSexPhrases";
