@@ -10,7 +10,6 @@
 #import "DataStorage.h"
 #import "MKStoreManager.h"
 #import <Crashlytics/Crashlytics.h>
-#import "ALSdk.h"
 #import "Flurry.h"
 
 @class ViewController;

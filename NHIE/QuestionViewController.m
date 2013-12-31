@@ -102,15 +102,14 @@
         questionLabel.frame = CGRectMake(70, 185, questionLabel.frame.size.width, questionLabel.frame.size.height);
     }
     
-    navigationBar.frame = CGRectMake(0, 0, navigationBar.frame.size.width, navigationBar.frame.size.height);
-    
     [self.view addSubview:backgroundImageView];
     [self.view sendSubviewToBack:backgroundImageView];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:186/255.0 green:190/255.0 blue:190/255.0 alpha:1.0]];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     NSLog(@"Adtracker: %d", adTracker);
     
     if (adTracker == 1) {

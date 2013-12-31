@@ -43,7 +43,6 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 -(void)createBackgroundView {
@@ -53,9 +52,9 @@
     
     if (IS_SHORT_IPHONE) {
         // iPhone 4S - Regular and 2x background
-        backgroundImageView.frame = CGRectMake(0, -15, DEVICE_WIDTH, SHORT_IPHONE_HEIGHT);
+        backgroundImageView.frame = CGRectMake(0, -20, DEVICE_WIDTH, SHORT_IPHONE_HEIGHT + 20);
     } else if (IS_TALL_IPHONE) {
-        backgroundImageView.frame = CGRectMake(0, -25, DEVICE_WIDTH, TALL_IPHONE_HEIGHT);
+        backgroundImageView.frame = CGRectMake(0, -30, DEVICE_WIDTH, TALL_IPHONE_HEIGHT + 30);
     }
     
     [self.view addSubview:backgroundImageView];

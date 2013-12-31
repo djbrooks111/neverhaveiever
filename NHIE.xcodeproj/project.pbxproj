@@ -156,9 +156,6 @@
 		26BD52761799FD9500A3B32C /* MPCloseButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26BD522B1799FD9500A3B32C /* MPCloseButtonX@2x.png */; };
 		26BD52771799FD9500A3B32C /* MRAID.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26BD522C1799FD9500A3B32C /* MRAID.bundle */; };
 		26BD52791799FDEE00A3B32C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD52781799FDEE00A3B32C /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		26BD5292179A223100A3B32C /* libAppLovinSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD5291179A223000A3B32C /* libAppLovinSdk.a */; };
-		26BD5295179A22A600A3B32C /* AppLovinBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD5294179A22A600A3B32C /* AppLovinBannerCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		26BD5298179A22DE00A3B32C /* AppLovinInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD5297179A22DE00A3B32C /* AppLovinInterstitialCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26BD52A5179A33A000A3B32C /* GreystripeBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD52A0179A33A000A3B32C /* GreystripeBannerCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26BD52A6179A33A000A3B32C /* GreystripeInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BD52A2179A33A000A3B32C /* GreystripeInterstitialCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26C48449178A25AB00DDD368 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C48446178A25AB00DDD368 /* NSData+MKBase64.m */; };
@@ -421,22 +418,6 @@
 		26BD522B1799FD9500A3B32C /* MPCloseButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MPCloseButtonX@2x.png"; sourceTree = "<group>"; };
 		26BD522C1799FD9500A3B32C /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
 		26BD52781799FDEE00A3B32C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		26BD5286179A222B00A3B32C /* ALAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAd.h; sourceTree = "<group>"; };
-		26BD5287179A222B00A3B32C /* ALAdDisplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdDisplayDelegate.h; sourceTree = "<group>"; };
-		26BD5288179A222B00A3B32C /* ALAdLoadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdLoadDelegate.h; sourceTree = "<group>"; };
-		26BD5289179A222B00A3B32C /* ALAdService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdService.h; sourceTree = "<group>"; };
-		26BD528A179A222B00A3B32C /* ALAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdSize.h; sourceTree = "<group>"; };
-		26BD528B179A222B00A3B32C /* ALAdUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdUpdateDelegate.h; sourceTree = "<group>"; };
-		26BD528C179A222B00A3B32C /* ALAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAdView.h; sourceTree = "<group>"; };
-		26BD528D179A222B00A3B32C /* ALInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALInterstitialAd.h; sourceTree = "<group>"; };
-		26BD528E179A222B00A3B32C /* ALSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSdk.h; sourceTree = "<group>"; };
-		26BD528F179A222B00A3B32C /* ALSdkSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSdkSettings.h; sourceTree = "<group>"; };
-		26BD5290179A222B00A3B32C /* ALTargetingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALTargetingData.h; sourceTree = "<group>"; };
-		26BD5291179A223000A3B32C /* libAppLovinSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppLovinSdk.a; sourceTree = "<group>"; };
-		26BD5293179A22A600A3B32C /* AppLovinBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLovinBannerCustomEvent.h; sourceTree = "<group>"; };
-		26BD5294179A22A600A3B32C /* AppLovinBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLovinBannerCustomEvent.m; sourceTree = "<group>"; };
-		26BD5296179A22DE00A3B32C /* AppLovinInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLovinInterstitialCustomEvent.h; sourceTree = "<group>"; };
-		26BD5297179A22DE00A3B32C /* AppLovinInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLovinInterstitialCustomEvent.m; sourceTree = "<group>"; };
 		26BD529F179A33A000A3B32C /* GreystripeBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreystripeBannerCustomEvent.h; sourceTree = "<group>"; };
 		26BD52A0179A33A000A3B32C /* GreystripeBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreystripeBannerCustomEvent.m; sourceTree = "<group>"; };
 		26BD52A1179A33A000A3B32C /* GreystripeInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreystripeInterstitialCustomEvent.h; sourceTree = "<group>"; };
@@ -492,7 +473,6 @@
 				269D7BD417443CF50036511A /* CoreGraphics.framework in Frameworks */,
 				26B081B81797378600716BD8 /* Crashlytics.framework in Frameworks */,
 				26BD52351799FD9500A3B32C /* libMMSDK_5.0.1.a in Frameworks */,
-				26BD5292179A223100A3B32C /* libAppLovinSdk.a in Frameworks */,
 				26105547179A39F8005362BC /* libGreystripeSDK.a in Frameworks */,
 				2672679A179C6AAC008FBA80 /* libFlurry_4.2.2.a in Frameworks */,
 			);
@@ -504,7 +484,6 @@
 		269D7BC317443CF50036511A = {
 			isa = PBXGroup;
 			children = (
-				26BD527A179A221100A3B32C /* AppLovin */,
 				26BD51761799FD9500A3B32C /* MoPubSDK */,
 				269D7BFF17443F780036511A /* MKStoreKit */,
 				269D7C0217443F890036511A /* Images */,
@@ -979,29 +958,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		26BD527A179A221100A3B32C /* AppLovin */ = {
-			isa = PBXGroup;
-			children = (
-				26BD5291179A223000A3B32C /* libAppLovinSdk.a */,
-				26BD5286179A222B00A3B32C /* ALAd.h */,
-				26BD5287179A222B00A3B32C /* ALAdDisplayDelegate.h */,
-				26BD5288179A222B00A3B32C /* ALAdLoadDelegate.h */,
-				26BD5289179A222B00A3B32C /* ALAdService.h */,
-				26BD528A179A222B00A3B32C /* ALAdSize.h */,
-				26BD528B179A222B00A3B32C /* ALAdUpdateDelegate.h */,
-				26BD528C179A222B00A3B32C /* ALAdView.h */,
-				26BD528D179A222B00A3B32C /* ALInterstitialAd.h */,
-				26BD528E179A222B00A3B32C /* ALSdk.h */,
-				26BD528F179A222B00A3B32C /* ALSdkSettings.h */,
-				26BD5290179A222B00A3B32C /* ALTargetingData.h */,
-				26BD5293179A22A600A3B32C /* AppLovinBannerCustomEvent.h */,
-				26BD5294179A22A600A3B32C /* AppLovinBannerCustomEvent.m */,
-				26BD5296179A22DE00A3B32C /* AppLovinInterstitialCustomEvent.h */,
-				26BD5297179A22DE00A3B32C /* AppLovinInterstitialCustomEvent.m */,
-			);
-			name = AppLovin;
-			sourceTree = "<group>";
-		};
 		26BD529E179A33A000A3B32C /* Greystripe */ = {
 			isa = PBXGroup;
 			children = (
@@ -1051,6 +1007,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "David J Brooks";
+				TargetAttributes = {
+					269D7BCB17443CF50036511A = {
+						DevelopmentTeam = ENJN7KKMH6;
+					};
+				};
 			};
 			buildConfigurationList = 269D7BC717443CF50036511A /* Build configuration list for PBXProject "NHIE" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1225,8 +1186,6 @@
 				26BD52721799FD9500A3B32C /* MPBannerCustomEvent.m in Sources */,
 				26BD52731799FD9500A3B32C /* MPInterstitialAdController.m in Sources */,
 				26BD52741799FD9500A3B32C /* MPInterstitialCustomEvent.m in Sources */,
-				26BD5295179A22A600A3B32C /* AppLovinBannerCustomEvent.m in Sources */,
-				26BD5298179A22DE00A3B32C /* AppLovinInterstitialCustomEvent.m in Sources */,
 				26BD52A5179A33A000A3B32C /* GreystripeBannerCustomEvent.m in Sources */,
 				26BD52A6179A33A000A3B32C /* GreystripeInterstitialCustomEvent.m in Sources */,
 			);
@@ -1308,6 +1267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1327,6 +1287,7 @@
 					"\"$(SRCROOT)/../../../../../repos/greystripe-ios-sdk/GreystripeSDK\"",
 					"\"$(SRCROOT)/../../../../../Downloads/InMobi_iOS_SDK_3-1.7.0/Libs\"",
 					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport/Greystripe\"",
+					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1341,7 +1302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Brooks (ENJN7KKMH6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1361,10 +1322,11 @@
 					"\"$(SRCROOT)/../../../../../repos/greystripe-ios-sdk/GreystripeSDK\"",
 					"\"$(SRCROOT)/../../../../../Downloads/InMobi_iOS_SDK_3-1.7.0/Libs\"",
 					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport/Greystripe\"",
+					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "390B1911-672C-4B84-859D-937AE0E4A99B";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "390B1911-672C-4B84-859D-937AE0E4A99B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

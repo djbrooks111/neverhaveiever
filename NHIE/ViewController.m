@@ -25,7 +25,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
     // Navigation Bar
     navigationBar.topItem.title = @"Pick Your Category";
@@ -43,7 +42,6 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
     // Creating the menu
     [self createMenuView];
@@ -60,8 +58,6 @@
     } else if (IS_TALL_IPHONE) {
         backgroundImageView.frame = CGRectMake(0, navigationBar.frame.size.height, DEVICE_WIDTH, TALL_IPHONE_HEIGHT - navigationBar.frame.size.height);
     }
-    
-    navigationBar.frame = CGRectMake(0, 0, navigationBar.frame.size.width, navigationBar.frame.size.height);
     
     [self.view addSubview:backgroundImageView];
     [self.view sendSubviewToBack:backgroundImageView];
