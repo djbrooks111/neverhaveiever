@@ -67,13 +67,16 @@
 }
 
 -(IBAction)restore {
-    [[MKStoreManager sharedManager] restorePreviousTransactionsOnComplete:^{
-        NSLog(@"Restoring purchases");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No more ads for you!" message:@"You have successfully removed advertisements from\nNever Have I Ever!\nEnjoy!" delegate:self cancelButtonTitle:@"Done!" otherButtonTitles:nil, nil];
+    [inAppPurchaseManager restorePurchases];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restoreComplete:) name:kInAppPurchaseManagerTransactionSucceededNotification object:nil];
+}
+
+-(void)restoreComplete:(NSNotification *)notification {
+    if ([[notification name] isEqualToString:kInAppPurchaseManagerTransactionSucceededNotification]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Purchase Restored" message:@"You will no longer see any advertisments!" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil, nil];
         [alert show];
-    } onError:^ (NSError *error) {
-        NSLog(@"Error restoring purchases: %@", [error description]);
-    }];
+    }
 }
 
 - (void)didReceiveMemoryWarning

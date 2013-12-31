@@ -12,5 +12,6 @@
 
 NSString *categoryString;
 NSString *urlString;
+InAppPurchaseManager *inAppPurchaseManager;
 
 @end

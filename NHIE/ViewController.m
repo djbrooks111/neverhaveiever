@@ -32,6 +32,10 @@
     // Creating the background view
     [self createBackgroundView];
     
+    // In App Purchases
+    inAppPurchaseManager = [[InAppPurchaseManager alloc] init];
+    [inAppPurchaseManager loadStore];
+    
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"AlreadyRan"]) {
         // Has not run before
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AlreadyRan"];

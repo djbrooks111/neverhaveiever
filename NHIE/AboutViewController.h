@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MKStoreManager.h"
+#import "DataStorage.h"
 
 @interface AboutViewController : UIViewController {
     IBOutlet UINavigationBar *navigationBar;

@@ -21,9 +21,6 @@
     categoryString = [[NSString alloc] init];
     urlString = [[NSString alloc] init];
     
-    // MKStoreKit
-    [MKStoreManager sharedManager];
-    
     // Flurry
     [Flurry startSession:@"B3QCQGRWD7GFK24TSH2J"];
     

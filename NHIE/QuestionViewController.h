@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DataStorage.h"
 #import "MBProgressHUD.h"
-#import "MKStoreManager.h"
 #import "MPAdView.h"
 #import "MPInterstitialAdController.h"
 #import "Flurry.h"

@@ -15,6 +15,7 @@
 #define DEVICE_WIDTH        320
 #define IS_RETINA_DISPLAY   ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && [UIScreen mainScreen].scale == 2.0)
 
+
 @interface QuestionViewController ()
 
 @end
@@ -42,8 +43,11 @@
     // Creating background view
     [self createBackgroundView];
     
-    if ([MKStoreManager isFeaturePurchased:@"removeAds"]) {
-        // SHOW NO ADS
+    [inAppPurchaseManager canMakePurchases];
+    
+
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isProUpgradePurchased"]) {
+        // Product has been purchased, do not show ads
         [self.adView setHidden:YES];
         [self.adView setAlpha:0];
         [self.adView removeFromSuperview];
@@ -54,7 +58,7 @@
         removeAdButton.frame = CGRectMake(0, 0, 0, 0);
         removeAdButton = NULL;
     } else {
-        // SHOW ADS
+        // Product has not been purchased, show ads
         // MoPub
         self.adView = [[MPAdView alloc] initWithAdUnitId:@"6f71e4b432744296a12deede3df084a3" size:MOPUB_BANNER_SIZE];
         self.adView.testing = NO;
@@ -126,7 +130,8 @@
     navigationBar.topItem.title = categoryString;
     
     // ADS
-    if ([MKStoreManager isFeaturePurchased:@"removeAds"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isProUpgradePurchased"]) {
+        // Product purchased
         [self.adView setHidden:YES];
         [self.adView setAlpha:0];
         [self.adView removeFromSuperview];
@@ -159,26 +164,26 @@
 
 -(IBAction)removeAds {
     NSLog(@"Button Clicked");
-    [[MKStoreManager sharedManager] buyFeature:@"removeAds"
-                                    onComplete:^(NSString* purchasedFeature, NSData* receiptData, NSArray* other)
-     {
-         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No more ads for you!" message:@"You have successfully removed advertisements from\nNever Have I Ever!\nEnjoy!" delegate:self cancelButtonTitle:@"Done!" otherButtonTitles:nil, nil];
-         [alert show];
-         NSLog(@"Purchased: %@", purchasedFeature);
-         [self.adView setHidden:YES];
-         [self.adView setAlpha:0];
-         [self.adView removeFromSuperview];
-         self.adView = NULL;
-         self.interstitial = NULL;
-         [removeAdButton setHidden:YES];
-         [removeAdButton removeFromSuperview];
-         removeAdButton.frame = CGRectMake(0, 0, 0, 0);
-         removeAdButton = NULL;
-     }
-                                   onCancelled:^
-     {
-         NSLog(@"User Cancelled Transaction");
-     }];
+    [inAppPurchaseManager purchaseProUpgrade];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(purchaseComplete:) name:kInAppPurchaseManagerTransactionSucceededNotification object:nil];
+}
+
+-(void)purchaseComplete:(NSNotification *)notification {
+    if ([[notification name] isEqualToString:kInAppPurchaseManagerTransactionSucceededNotification]) {
+        NSLog(@"Purchase Successful!");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No more ads for you!" message:@"You have successfully removed advertisements from\nNever Have I Ever!\nEnjoy!" delegate:self cancelButtonTitle:@"Done!" otherButtonTitles:nil, nil];
+        [alert show];
+        [self.adView setHidden:YES];
+        [self.adView setAlpha:0];
+        [self.adView removeFromSuperview];
+        self.adView = NULL;
+        self.interstitial = NULL;
+        [removeAdButton setHidden:YES];
+        [removeAdButton removeFromSuperview];
+        removeAdButton.frame = CGRectMake(0, 0, 0, 0);
+        removeAdButton = NULL;
+    }
 }
 
 // MoPub Banner
