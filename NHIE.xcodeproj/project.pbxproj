@@ -46,7 +46,8 @@
 		263291A318728BAA00ACEDF1 /* SchoolButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919518728BAA00ACEDF1 /* SchoolButton@2x.png */; };
 		263291A618728BAA00ACEDF1 /* WorkButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919818728BAA00ACEDF1 /* WorkButton.png */; };
 		263291A718728BAA00ACEDF1 /* WorkButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2632919918728BAA00ACEDF1 /* WorkButton@2x.png */; };
-		2672679A179C6AAC008FBA80 /* libFlurry_4.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26726799179C6AAC008FBA80 /* libFlurry_4.2.2.a */; };
+		263291AD187299ED00ACEDF1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 263291AC187299ED00ACEDF1 /* MBProgressHUD.m */; };
+		263291AE18729B1800ACEDF1 /* libFlurry_4.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263291A81872995800ACEDF1 /* libFlurry_4.3.0.a */; };
 		2690409C175177B5004EA055 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2690409A175177B5004EA055 /* AboutViewController.m */; };
 		2690409D175177B5004EA055 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2690409B175177B5004EA055 /* AboutViewController.xib */; };
 		269D7BD017443CF50036511A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7BCF17443CF50036511A /* UIKit.framework */; };
@@ -65,7 +66,6 @@
 		269D7C2B17443FD60036511A /* RelationshipsPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 269D7C2517443FD60036511A /* RelationshipsPhrases.txt */; };
 		269D7C2C17443FD60036511A /* SchoolPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 269D7C2617443FD60036511A /* SchoolPhrases.txt */; };
 		269D7C2D17443FD60036511A /* WorkPhrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 269D7C2717443FD60036511A /* WorkPhrases.txt */; };
-		269D7C6417443FE90036511A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 269D7C6317443FE90036511A /* MBProgressHUD.m */; };
 		269D7C6C174440110036511A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7C6B174440110036511A /* QuartzCore.framework */; };
 		269D7C701744401C0036511A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7C6F1744401C0036511A /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		269D7C72174440200036511A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7C71174440200036511A /* AudioToolbox.framework */; };
@@ -211,8 +211,10 @@
 		2632919518728BAA00ACEDF1 /* SchoolButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SchoolButton@2x.png"; sourceTree = "<group>"; };
 		2632919818728BAA00ACEDF1 /* WorkButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WorkButton.png; sourceTree = "<group>"; };
 		2632919918728BAA00ACEDF1 /* WorkButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WorkButton@2x.png"; sourceTree = "<group>"; };
-		26726798179C6AAC008FBA80 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		26726799179C6AAC008FBA80 /* libFlurry_4.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.2.a; sourceTree = "<group>"; };
+		263291A81872995800ACEDF1 /* libFlurry_4.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.0.a; sourceTree = "<group>"; };
+		263291AA1872996C00ACEDF1 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		263291AB187299ED00ACEDF1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		263291AC187299ED00ACEDF1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		26904099175177B5004EA055 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		2690409A175177B5004EA055 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		2690409B175177B5004EA055 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -239,8 +241,6 @@
 		269D7C2517443FD60036511A /* RelationshipsPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RelationshipsPhrases.txt; path = ../RelationshipsPhrases.txt; sourceTree = "<group>"; };
 		269D7C2617443FD60036511A /* SchoolPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SchoolPhrases.txt; path = ../SchoolPhrases.txt; sourceTree = "<group>"; };
 		269D7C2717443FD60036511A /* WorkPhrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WorkPhrases.txt; path = ../WorkPhrases.txt; sourceTree = "<group>"; };
-		269D7C6217443FE90036511A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		269D7C6317443FE90036511A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		269D7C6B174440110036511A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		269D7C6F1744401C0036511A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		269D7C71174440200036511A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -446,6 +446,7 @@
 				260FFB03178A15FB0052D72B /* MobileCoreServices.framework in Frameworks */,
 				260FFB01178A15F40052D72B /* libz.dylib in Frameworks */,
 				260FFAFF178A15EE0052D72B /* libsqlite3.dylib in Frameworks */,
+				263291AE18729B1800ACEDF1 /* libFlurry_4.3.0.a in Frameworks */,
 				260FFAFD178A15E70052D72B /* CoreMotion.framework in Frameworks */,
 				260FFAFB178A15D90052D72B /* CoreTelephony.framework in Frameworks */,
 				260FFAF9178A15C70052D72B /* CoreLocation.framework in Frameworks */,
@@ -464,7 +465,6 @@
 				26B081B81797378600716BD8 /* Crashlytics.framework in Frameworks */,
 				26BD52351799FD9500A3B32C /* libMMSDK_5.0.1.a in Frameworks */,
 				26105547179A39F8005362BC /* libGreystripeSDK.a in Frameworks */,
-				2672679A179C6AAC008FBA80 /* libFlurry_4.2.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,8 +554,8 @@
 				26904099175177B5004EA055 /* AboutViewController.h */,
 				2690409A175177B5004EA055 /* AboutViewController.m */,
 				2690409B175177B5004EA055 /* AboutViewController.xib */,
-				26726798179C6AAC008FBA80 /* Flurry.h */,
-				26726799179C6AAC008FBA80 /* libFlurry_4.2.2.a */,
+				263291AA1872996C00ACEDF1 /* Flurry.h */,
+				263291A81872995800ACEDF1 /* libFlurry_4.3.0.a */,
 				269D7BD617443CF50036511A /* Supporting Files */,
 			);
 			path = NHIE;
@@ -629,8 +629,8 @@
 		269D7C0317443F8E0036511A /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				269D7C6217443FE90036511A /* MBProgressHUD.h */,
-				269D7C6317443FE90036511A /* MBProgressHUD.m */,
+				263291AB187299ED00ACEDF1 /* MBProgressHUD.h */,
+				263291AC187299ED00ACEDF1 /* MBProgressHUD.m */,
 			);
 			name = MBProgressHUD;
 			sourceTree = "<group>";
@@ -1089,9 +1089,9 @@
 				269D7BE917443CF50036511A /* ViewController.m in Sources */,
 				269D7BF917443E680036511A /* DataStorage.m in Sources */,
 				269D7BFD17443EBC0036511A /* QuestionViewController.m in Sources */,
-				269D7C6417443FE90036511A /* MBProgressHUD.m in Sources */,
 				2690409C175177B5004EA055 /* AboutViewController.m in Sources */,
 				26C48449178A25AB00DDD368 /* NSData+MKBase64.m in Sources */,
+				263291AD187299ED00ACEDF1 /* MBProgressHUD.m in Sources */,
 				26C4844A178A25AB00DDD368 /* SFHFKeychainUtils.m in Sources */,
 				26C48450178A25C100DDD368 /* MKSKProduct.m in Sources */,
 				26C48451178A25C100DDD368 /* MKSKSubscriptionProduct.m in Sources */,
@@ -1248,18 +1248,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHIE/NHIE-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../Airship/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "NHIE/NHIE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/NHIE\"",
-					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport/Millennial/SDK\"",
-					"\"$(SRCROOT)/../../../../../repos/greystripe-ios-sdk/GreystripeSDK\"",
-					"\"$(SRCROOT)/../../../../../Downloads/InMobi_iOS_SDK_3-1.7.0/Libs\"",
-					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport/Greystripe\"",
-					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport\"",
+					"$(SRCROOT)/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1283,18 +1277,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHIE/NHIE-Prefix.pch";
-				HEADER_SEARCH_PATHS = "../Airship/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "NHIE/NHIE-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/NHIE\"",
-					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport/Millennial/SDK\"",
-					"\"$(SRCROOT)/../../../../../repos/greystripe-ios-sdk/GreystripeSDK\"",
-					"\"$(SRCROOT)/../../../../../Downloads/InMobi_iOS_SDK_3-1.7.0/Libs\"",
-					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport/Greystripe\"",
-					"\"$(SRCROOT)/MoPubSDK/AdNetworkSupport\"",
+					"$(SRCROOT)/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
