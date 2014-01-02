@@ -80,7 +80,7 @@
 		268C1A90187522280009C96E /* MPTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A56187522280009C96E /* MPTimer.m */; };
 		268C1A91187522280009C96E /* MPCloseButtonX.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A58187522280009C96E /* MPCloseButtonX.png */; };
 		268C1A92187522280009C96E /* MPCloseButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A59187522280009C96E /* MPCloseButtonX@2x.png */; };
-		268C1A93187522280009C96E /* MRAID.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A5A187522280009C96E /* MRAID.bundle */; };
+		268C1A95187522800009C96E /* MRAID.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A94187522800009C96E /* MRAID.bundle */; };
 		2690409C175177B5004EA055 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2690409A175177B5004EA055 /* AboutViewController.m */; };
 		2690409D175177B5004EA055 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2690409B175177B5004EA055 /* AboutViewController.xib */; };
 		269D7BD017443CF50036511A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7BCF17443CF50036511A /* UIKit.framework */; };
@@ -312,7 +312,7 @@
 		268C1A56187522280009C96E /* MPTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTimer.m; sourceTree = "<group>"; };
 		268C1A58187522280009C96E /* MPCloseButtonX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MPCloseButtonX.png; sourceTree = "<group>"; };
 		268C1A59187522280009C96E /* MPCloseButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MPCloseButtonX@2x.png"; sourceTree = "<group>"; };
-		268C1A5A187522280009C96E /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
+		268C1A94187522800009C96E /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
 		26904099175177B5004EA055 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		2690409A175177B5004EA055 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		2690409B175177B5004EA055 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -656,7 +656,7 @@
 			children = (
 				268C1A58187522280009C96E /* MPCloseButtonX.png */,
 				268C1A59187522280009C96E /* MPCloseButtonX@2x.png */,
-				268C1A5A187522280009C96E /* MRAID.bundle */,
+				268C1A94187522800009C96E /* MRAID.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1005,7 +1005,7 @@
 				26BED60018736B10003FD5DD /* CategoryBackground@2x.png in Resources */,
 				269D7BDA17443CF50036511A /* InfoPlist.strings in Resources */,
 				26BED60B18736B10003FD5DD /* QuestionBackground.png in Resources */,
-				268C1A93187522280009C96E /* MRAID.bundle in Resources */,
+				268C1A95187522800009C96E /* MRAID.bundle in Resources */,
 				269D7C7F174441210036511A /* ViewController.xib in Resources */,
 				26BED60E18736B10003FD5DD /* QuestionButton@2x.png in Resources */,
 				269D7C80174441210036511A /* QuestionViewController.xib in Resources */,
