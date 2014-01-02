@@ -14,6 +14,7 @@
 
 @implementation MRCommand
 
+@synthesize delegate = _delegate;
 @synthesize view = _view;
 @synthesize parameters = _parameters;
 
@@ -53,6 +54,11 @@
     [super dealloc];
 }
 
+// return YES by default for user safety
+- (BOOL)requiresUserInteraction {
+    return YES;
+}
+
 - (BOOL)execute {
     return YES;
 }
@@ -85,6 +91,11 @@
     if (!value || [value isEqual:[NSNull null]] || value.length == 0) return nil;
 
     return value;
+}
+
+- (NSURL *)urlFromParametersForKey:(NSString *)key {
+    NSString *value = [[self stringFromParametersForKey:key] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [NSURL URLWithString:value];
 }
 
 @end
@@ -149,6 +160,7 @@
                     useCustomClose:[self boolFromParametersForKey:@"shouldUseCustomClose"]
                            isModal:NO
              shouldLockOrientation:[self boolFromParametersForKey:@"lockOrientation"]];
+
     return YES;
 }
 
@@ -160,6 +172,10 @@
 
 + (void)load {
     [MRCommand registerCommand:self];
+}
+
+- (BOOL)requiresUserInteraction {
+    return NO;
 }
 
 + (NSString *)commandType {
@@ -187,8 +203,7 @@
 }
 
 - (BOOL)execute {
-    NSString *URLString = [self stringFromParametersForKey:@"url"];
-    [self.view handleMRAIDOpenCallForURL:[NSURL URLWithString:URLString]];
+    [self.view handleMRAIDOpenCallForURL:[self urlFromParametersForKey:@"url"]];
     return YES;
 }
 

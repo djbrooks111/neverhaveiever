@@ -120,6 +120,13 @@
     [super viewWillDisappear:animated];
 }
 
+#pragma mark - Hidding status bar (iOS 7 and above)
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 #pragma mark -
 #pragma mark Navigation
 
@@ -254,7 +261,7 @@
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = CGBitmapContextCreate(nil,27,27,8,0,
-                                                 colorSpace,kCGImageAlphaPremultipliedLast);
+                                                 colorSpace,(CGBitmapInfo)kCGImageAlphaPremultipliedLast);
     CFRelease(colorSpace);
     return context;
 }

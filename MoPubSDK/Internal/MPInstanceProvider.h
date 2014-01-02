@@ -44,12 +44,29 @@
 @class MPAdDestinationDisplayAgent;
 @protocol MPAdDestinationDisplayAgentDelegate;
 
+// MRAID
+@class MRAdView;
+@protocol MRAdViewDelegate;
+@class MRBundleManager;
+@class MRJavaScriptEventEmitter;
+@class MRCalendarManager;
+@protocol MRCalendarManagerDelegate;
+@class EKEventStore;
+@class EKEventEditViewController;
+@protocol EKEventEditViewDelegate;
+@class MRPictureManager;
+@protocol MRPictureManagerDelegate;
+@class MRImageDownloader;
+@protocol MRImageDownloaderDelegate;
+@class MRVideoPlayerManager;
+@protocol MRVideoPlayerManagerDelegate;
+
 // Utilities
+@class MPAdAlertManager, MPAdAlertGestureRecognizer;
 @class MPAnalyticsTracker;
 @class MPReachability;
 @class MPTimer;
-@class CTCarrier;
-
+@class MPMoviePlayerViewController;
 
 typedef id(^MPSingletonProviderBlock)();
 
@@ -92,10 +109,33 @@ typedef id(^MPSingletonProviderBlock)();
 - (MPURLResolver *)buildMPURLResolver;
 - (MPAdDestinationDisplayAgent *)buildMPAdDestinationDisplayAgentWithDelegate:(id<MPAdDestinationDisplayAgentDelegate>)delegate;
 
+#pragma mark - MRAID
+- (MRAdView *)buildMRAdViewWithFrame:(CGRect)frame
+                     allowsExpansion:(BOOL)allowsExpansion
+                    closeButtonStyle:(NSUInteger)style
+                       placementType:(NSUInteger)type
+                            delegate:(id<MRAdViewDelegate>)delegate;
+- (MRBundleManager *)buildMRBundleManager;
+- (UIWebView *)buildUIWebViewWithFrame:(CGRect)frame;
+- (MRJavaScriptEventEmitter *)buildMRJavaScriptEventEmitterWithWebView:(UIWebView *)webView;
+- (MRCalendarManager *)buildMRCalendarManagerWithDelegate:(id<MRCalendarManagerDelegate>)delegate;
+- (EKEventEditViewController *)buildEKEventEditViewControllerWithEditViewDelegate:(id<EKEventEditViewDelegate>)editViewDelegate;
+- (EKEventStore *)buildEKEventStore;
+- (MRPictureManager *)buildMRPictureManagerWithDelegate:(id<MRPictureManagerDelegate>)delegate;
+- (MRImageDownloader *)buildMRImageDownloaderWithDelegate:(id<MRImageDownloaderDelegate>)delegate;
+- (MRVideoPlayerManager *)buildMRVideoPlayerManagerWithDelegate:(id<MRVideoPlayerManagerDelegate>)delegate;
+- (MPMoviePlayerViewController *)buildMPMoviePlayerViewControllerWithURL:(NSURL *)URL;
+
 #pragma mark - Utilities
+- (id<MPAdAlertManagerProtocol>)buildMPAdAlertManagerWithDelegate:(id)delegate;
+- (MPAdAlertGestureRecognizer *)buildMPAdAlertGestureRecognizerWithTarget:(id)target action:(SEL)action;
+- (NSOperationQueue *)sharedOperationQueue;
 - (MPAnalyticsTracker *)sharedMPAnalyticsTracker;
 - (MPReachability *)sharedMPReachability;
-- (CTCarrier *)buildCTCarrier;
+
+// This call may return nil and may not update if the user hot-swaps the device's sim card.
+- (NSDictionary *)sharedCarrierInfo;
+
 - (MPTimer *)buildMPTimerWithTimeInterval:(NSTimeInterval)seconds target:(id)target selector:(SEL)selector repeats:(BOOL)repeats;
 
 @end

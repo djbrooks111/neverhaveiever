@@ -43,6 +43,16 @@
 
 #pragma mark - MPMRAIDInterstitialViewControllerDelegate
 
+- (CLLocation *)location
+{
+    return [self.delegate location];
+}
+
+- (NSString *)adUnitId
+{
+    return [self.delegate adUnitId];
+}
+
 - (void)interstitialDidLoadAd:(MPInterstitialViewController *)interstitial
 {
     MPLogInfo(@"MoPub MRAID interstitial did load");
@@ -76,7 +86,6 @@
 - (void)interstitialDidDisappear:(MPInterstitialViewController *)interstitial
 {
     MPLogInfo(@"MoPub MRAID interstitial did disappear");
-    
     [self.delegate interstitialCustomEventDidDisappear:self];
 }
 

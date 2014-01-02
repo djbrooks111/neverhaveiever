@@ -42,6 +42,7 @@ BOOL MPViewIsVisible(UIView *view);
 #define MP_IOS_5_0  50000
 #define MP_IOS_5_1  50100
 #define MP_IOS_6_0  60000
+#define MP_IOS_7_0  70000
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -75,5 +76,32 @@ typedef NSUInteger MPInterstitialOrientationType;
  * Returns string with reserved/unsafe characters encoded.
  */
 - (NSString *)URLEncodedString;
+
+@end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@interface UIDevice (MPAdditions)
+
+- (NSString *)hardwareDeviceName;
+
+@end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Optional Class Forward Def Protocols
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@class MPAdConfiguration, CLLocation;
+
+@protocol MPAdAlertManagerProtocol <NSObject>
+
+@property (nonatomic, retain) MPAdConfiguration *adConfiguration;
+@property (nonatomic, copy) NSString *adUnitId;
+@property (nonatomic, copy) CLLocation *location;
+@property (nonatomic, assign) UIView *targetAdView;
+@property (nonatomic, assign) id delegate;
+
+- (void)beginMonitoringAlerts;
+- (void)processAdAlertOnce;
 
 @end
