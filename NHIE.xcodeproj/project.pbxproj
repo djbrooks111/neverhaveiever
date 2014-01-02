@@ -19,68 +19,72 @@
 		26105547179A39F8005362BC /* libGreystripeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26105546179A39F8005362BC /* libGreystripeSDK.a */; };
 		26105548179A3A22005362BC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD51741799EAD100A3B32C /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		263291AE18729B1800ACEDF1 /* libFlurry_4.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263291A81872995800ACEDF1 /* libFlurry_4.3.0.a */; };
-		268C19D9187522180009C96E /* MPAdConversionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19CD187522180009C96E /* MPAdConversionTracker.m */; };
-		268C19DA187522180009C96E /* MPAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19CF187522180009C96E /* MPAdView.m */; };
-		268C19DB187522180009C96E /* MPBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19D1187522180009C96E /* MPBannerCustomEvent.m */; };
-		268C19DC187522180009C96E /* MPInterstitialAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19D5187522180009C96E /* MPInterstitialAdController.m */; };
-		268C19DD187522180009C96E /* MPInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19D7187522180009C96E /* MPInterstitialCustomEvent.m */; };
-		268C1A5B187522280009C96E /* MPBannerAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E1187522270009C96E /* MPBannerAdManager.m */; };
-		268C1A5C187522280009C96E /* MPBannerCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E4187522270009C96E /* MPBannerCustomEventAdapter.m */; };
-		268C1A5D187522280009C96E /* MPBaseBannerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E6187522270009C96E /* MPBaseBannerAdapter.m */; };
-		268C1A5E187522280009C96E /* MPLegacyBannerCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E8187522270009C96E /* MPLegacyBannerCustomEventAdapter.m */; };
-		268C1A5F187522280009C96E /* MPAdAlertGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19ED187522270009C96E /* MPAdAlertGestureRecognizer.m */; };
-		268C1A60187522280009C96E /* MPAdAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19EF187522270009C96E /* MPAdAlertManager.m */; };
-		268C1A61187522280009C96E /* MPAdBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F1187522270009C96E /* MPAdBrowserController.m */; };
+		268C19D9187522180009C96E /* MPAdConversionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19CD187522180009C96E /* MPAdConversionTracker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C19DA187522180009C96E /* MPAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19CF187522180009C96E /* MPAdView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C19DB187522180009C96E /* MPBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19D1187522180009C96E /* MPBannerCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C19DC187522180009C96E /* MPInterstitialAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19D5187522180009C96E /* MPInterstitialAdController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C19DD187522180009C96E /* MPInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19D7187522180009C96E /* MPInterstitialCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A5B187522280009C96E /* MPBannerAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E1187522270009C96E /* MPBannerAdManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A5C187522280009C96E /* MPBannerCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E4187522270009C96E /* MPBannerCustomEventAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A5D187522280009C96E /* MPBaseBannerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E6187522270009C96E /* MPBaseBannerAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A5E187522280009C96E /* MPLegacyBannerCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19E8187522270009C96E /* MPLegacyBannerCustomEventAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A5F187522280009C96E /* MPAdAlertGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19ED187522270009C96E /* MPAdAlertGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A60187522280009C96E /* MPAdAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19EF187522270009C96E /* MPAdAlertManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A61187522280009C96E /* MPAdBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F1187522270009C96E /* MPAdBrowserController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		268C1A62187522280009C96E /* MPAdBrowserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268C19F2187522270009C96E /* MPAdBrowserController.xib */; };
-		268C1A63187522280009C96E /* MPAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F4187522270009C96E /* MPAdConfiguration.m */; };
-		268C1A64187522280009C96E /* MPAdDestinationDisplayAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F6187522270009C96E /* MPAdDestinationDisplayAgent.m */; };
-		268C1A65187522280009C96E /* MPAdServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F8187522270009C96E /* MPAdServerCommunicator.m */; };
-		268C1A66187522280009C96E /* MPAdServerURLBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19FA187522270009C96E /* MPAdServerURLBuilder.m */; };
-		268C1A67187522280009C96E /* MPFacebookKeywordProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19FC187522270009C96E /* MPFacebookKeywordProvider.m */; };
-		268C1A68187522280009C96E /* MPLastResortDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19FF187522270009C96E /* MPLastResortDelegate.m */; };
-		268C1A69187522280009C96E /* MPProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A01187522270009C96E /* MPProgressOverlayView.m */; };
-		268C1A6A187522280009C96E /* MPURLResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A03187522270009C96E /* MPURLResolver.m */; };
-		268C1A6B187522280009C96E /* MPAdWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A06187522270009C96E /* MPAdWebView.m */; };
-		268C1A6C187522280009C96E /* MPAdWebViewAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A08187522270009C96E /* MPAdWebViewAgent.m */; };
-		268C1A6D187522280009C96E /* MPHTMLBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A0A187522270009C96E /* MPHTMLBannerCustomEvent.m */; };
-		268C1A6E187522280009C96E /* MPHTMLInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A0C187522270009C96E /* MPHTMLInterstitialCustomEvent.m */; };
-		268C1A6F187522280009C96E /* MPHTMLInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A0E187522270009C96E /* MPHTMLInterstitialViewController.m */; };
-		268C1A70187522280009C96E /* MPBaseInterstitialAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A11187522270009C96E /* MPBaseInterstitialAdapter.m */; };
-		268C1A71187522280009C96E /* MPInterstitialAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A13187522270009C96E /* MPInterstitialAdManager.m */; };
-		268C1A72187522280009C96E /* MPInterstitialCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A16187522270009C96E /* MPInterstitialCustomEventAdapter.m */; };
-		268C1A73187522280009C96E /* MPInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A18187522270009C96E /* MPInterstitialViewController.m */; };
-		268C1A74187522280009C96E /* MPLegacyInterstitialCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A1A187522270009C96E /* MPLegacyInterstitialCustomEventAdapter.m */; };
-		268C1A75187522280009C96E /* MPInstanceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A1D187522280009C96E /* MPInstanceProvider.m */; };
+		268C1A63187522280009C96E /* MPAdConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F4187522270009C96E /* MPAdConfiguration.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A64187522280009C96E /* MPAdDestinationDisplayAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F6187522270009C96E /* MPAdDestinationDisplayAgent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A65187522280009C96E /* MPAdServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19F8187522270009C96E /* MPAdServerCommunicator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A66187522280009C96E /* MPAdServerURLBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19FA187522270009C96E /* MPAdServerURLBuilder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A67187522280009C96E /* MPFacebookKeywordProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19FC187522270009C96E /* MPFacebookKeywordProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A68187522280009C96E /* MPLastResortDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C19FF187522270009C96E /* MPLastResortDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A69187522280009C96E /* MPProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A01187522270009C96E /* MPProgressOverlayView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A6A187522280009C96E /* MPURLResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A03187522270009C96E /* MPURLResolver.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A6B187522280009C96E /* MPAdWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A06187522270009C96E /* MPAdWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A6C187522280009C96E /* MPAdWebViewAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A08187522270009C96E /* MPAdWebViewAgent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A6D187522280009C96E /* MPHTMLBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A0A187522270009C96E /* MPHTMLBannerCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A6E187522280009C96E /* MPHTMLInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A0C187522270009C96E /* MPHTMLInterstitialCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A6F187522280009C96E /* MPHTMLInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A0E187522270009C96E /* MPHTMLInterstitialViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A70187522280009C96E /* MPBaseInterstitialAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A11187522270009C96E /* MPBaseInterstitialAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A71187522280009C96E /* MPInterstitialAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A13187522270009C96E /* MPInterstitialAdManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A72187522280009C96E /* MPInterstitialCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A16187522270009C96E /* MPInterstitialCustomEventAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A73187522280009C96E /* MPInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A18187522270009C96E /* MPInterstitialViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A74187522280009C96E /* MPLegacyInterstitialCustomEventAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A1A187522270009C96E /* MPLegacyInterstitialCustomEventAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A75187522280009C96E /* MPInstanceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A1D187522280009C96E /* MPInstanceProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		268C1A76187522280009C96E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A1F187522280009C96E /* LICENSE */; };
-		268C1A77187522280009C96E /* MPMRAIDBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A21187522280009C96E /* MPMRAIDBannerCustomEvent.m */; };
-		268C1A78187522280009C96E /* MPMRAIDInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A23187522280009C96E /* MPMRAIDInterstitialCustomEvent.m */; };
-		268C1A79187522280009C96E /* MPMRAIDInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A25187522280009C96E /* MPMRAIDInterstitialViewController.m */; };
-		268C1A7A187522280009C96E /* MRAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A28187522280009C96E /* MRAdView.m */; };
-		268C1A7B187522280009C96E /* MRAdViewDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A2A187522280009C96E /* MRAdViewDisplayController.m */; };
-		268C1A7C187522280009C96E /* MRBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A2C187522280009C96E /* MRBundleManager.m */; };
-		268C1A7D187522280009C96E /* MRCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A2E187522280009C96E /* MRCalendarManager.m */; };
-		268C1A7E187522280009C96E /* MRCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A30187522280009C96E /* MRCommand.m */; };
-		268C1A7F187522280009C96E /* MRDimmingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A32187522280009C96E /* MRDimmingView.m */; };
-		268C1A80187522280009C96E /* MRImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A34187522280009C96E /* MRImageDownloader.m */; };
-		268C1A81187522280009C96E /* MRJavaScriptEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A36187522280009C96E /* MRJavaScriptEventEmitter.m */; };
-		268C1A82187522280009C96E /* MRPictureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A38187522280009C96E /* MRPictureManager.m */; };
-		268C1A83187522280009C96E /* MRProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A3A187522280009C96E /* MRProperty.m */; };
-		268C1A84187522280009C96E /* MRVideoPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A3C187522280009C96E /* MRVideoPlayerManager.m */; };
-		268C1A85187522280009C96E /* NSURL+MPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A40187522280009C96E /* NSURL+MPAdditions.m */; };
-		268C1A86187522280009C96E /* UIViewController+MPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A42187522280009C96E /* UIViewController+MPAdditions.m */; };
-		268C1A87187522280009C96E /* UIWebView+MPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A44187522280009C96E /* UIWebView+MPAdditions.m */; };
-		268C1A88187522280009C96E /* MPAnalyticsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A46187522280009C96E /* MPAnalyticsTracker.m */; };
-		268C1A89187522280009C96E /* MPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A48187522280009C96E /* MPError.m */; };
-		268C1A8A187522280009C96E /* MPGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A4A187522280009C96E /* MPGlobal.m */; };
-		268C1A8B187522280009C96E /* MPIdentityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A4C187522280009C96E /* MPIdentityProvider.m */; };
-		268C1A8C187522280009C96E /* MPLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A4E187522280009C96E /* MPLogging.m */; };
-		268C1A8D187522280009C96E /* MPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A50187522280009C96E /* MPReachability.m */; };
-		268C1A8E187522280009C96E /* MPSessionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A52187522280009C96E /* MPSessionTracker.m */; };
-		268C1A8F187522280009C96E /* MPStoreKitProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A54187522280009C96E /* MPStoreKitProvider.m */; };
-		268C1A90187522280009C96E /* MPTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A56187522280009C96E /* MPTimer.m */; };
+		268C1A77187522280009C96E /* MPMRAIDBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A21187522280009C96E /* MPMRAIDBannerCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A78187522280009C96E /* MPMRAIDInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A23187522280009C96E /* MPMRAIDInterstitialCustomEvent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A79187522280009C96E /* MPMRAIDInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A25187522280009C96E /* MPMRAIDInterstitialViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A7A187522280009C96E /* MRAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A28187522280009C96E /* MRAdView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A7B187522280009C96E /* MRAdViewDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A2A187522280009C96E /* MRAdViewDisplayController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A7C187522280009C96E /* MRBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A2C187522280009C96E /* MRBundleManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A7D187522280009C96E /* MRCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A2E187522280009C96E /* MRCalendarManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A7E187522280009C96E /* MRCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A30187522280009C96E /* MRCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A7F187522280009C96E /* MRDimmingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A32187522280009C96E /* MRDimmingView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A80187522280009C96E /* MRImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A34187522280009C96E /* MRImageDownloader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A81187522280009C96E /* MRJavaScriptEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A36187522280009C96E /* MRJavaScriptEventEmitter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A82187522280009C96E /* MRPictureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A38187522280009C96E /* MRPictureManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A83187522280009C96E /* MRProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A3A187522280009C96E /* MRProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A84187522280009C96E /* MRVideoPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A3C187522280009C96E /* MRVideoPlayerManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A85187522280009C96E /* NSURL+MPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A40187522280009C96E /* NSURL+MPAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A86187522280009C96E /* UIViewController+MPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A42187522280009C96E /* UIViewController+MPAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A87187522280009C96E /* UIWebView+MPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A44187522280009C96E /* UIWebView+MPAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A88187522280009C96E /* MPAnalyticsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A46187522280009C96E /* MPAnalyticsTracker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A89187522280009C96E /* MPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A48187522280009C96E /* MPError.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A8A187522280009C96E /* MPGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A4A187522280009C96E /* MPGlobal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A8B187522280009C96E /* MPIdentityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A4C187522280009C96E /* MPIdentityProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A8C187522280009C96E /* MPLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A4E187522280009C96E /* MPLogging.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A8D187522280009C96E /* MPReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A50187522280009C96E /* MPReachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A8E187522280009C96E /* MPSessionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A52187522280009C96E /* MPSessionTracker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A8F187522280009C96E /* MPStoreKitProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A54187522280009C96E /* MPStoreKitProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268C1A90187522280009C96E /* MPTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 268C1A56187522280009C96E /* MPTimer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		268C1A91187522280009C96E /* MPCloseButtonX.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A58187522280009C96E /* MPCloseButtonX.png */; };
 		268C1A92187522280009C96E /* MPCloseButtonX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A59187522280009C96E /* MPCloseButtonX@2x.png */; };
 		268C1A95187522800009C96E /* MRAID.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A94187522800009C96E /* MRAID.bundle */; };
+		268C1A97187524700009C96E /* Icon120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A96187524700009C96E /* Icon120@2x.png */; };
+		268C1A9D1875261A0009C96E /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A9A1875261A0009C96E /* Icon29.png */; };
+		268C1A9E1875261A0009C96E /* Icon58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A9B1875261A0009C96E /* Icon58@2x.png */; };
+		268C1A9F1875261A0009C96E /* Icon80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 268C1A9C1875261A0009C96E /* Icon80@2x.png */; };
 		2690409C175177B5004EA055 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2690409A175177B5004EA055 /* AboutViewController.m */; };
 		2690409D175177B5004EA055 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2690409B175177B5004EA055 /* AboutViewController.xib */; };
 		269D7BD017443CF50036511A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7BCF17443CF50036511A /* UIKit.framework */; };
@@ -313,6 +317,10 @@
 		268C1A58187522280009C96E /* MPCloseButtonX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MPCloseButtonX.png; sourceTree = "<group>"; };
 		268C1A59187522280009C96E /* MPCloseButtonX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MPCloseButtonX@2x.png"; sourceTree = "<group>"; };
 		268C1A94187522800009C96E /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
+		268C1A96187524700009C96E /* Icon120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon120@2x.png"; sourceTree = "<group>"; };
+		268C1A9A1875261A0009C96E /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
+		268C1A9B1875261A0009C96E /* Icon58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon58@2x.png"; sourceTree = "<group>"; };
+		268C1A9C1875261A0009C96E /* Icon80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon80@2x.png"; sourceTree = "<group>"; };
 		26904099175177B5004EA055 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		2690409A175177B5004EA055 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		2690409B175177B5004EA055 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
@@ -903,6 +911,10 @@
 				26BED5E118736B10003FD5DD /* DrinkingButton@2x.png */,
 				26BED5E218736B10003FD5DD /* Icon.png */,
 				26BED5E318736B10003FD5DD /* Icon@2x.png */,
+				268C1A9A1875261A0009C96E /* Icon29.png */,
+				268C1A9B1875261A0009C96E /* Icon58@2x.png */,
+				268C1A9C1875261A0009C96E /* Icon80@2x.png */,
+				268C1A96187524700009C96E /* Icon120@2x.png */,
 				26BED5E418736B10003FD5DD /* QuestionBackground-568h@2x.png */,
 				26BED5E518736B10003FD5DD /* QuestionBackground.png */,
 				26BED5E618736B10003FD5DD /* QuestionBackground@2x.png */,
@@ -1012,6 +1024,7 @@
 				26BED61218736B10003FD5DD /* RelationshipsButton@2x.png in Resources */,
 				26BED61318736B10003FD5DD /* SchoolButton.png in Resources */,
 				2690409D175177B5004EA055 /* AboutViewController.xib in Resources */,
+				268C1A9E1875261A0009C96E /* Icon58@2x.png in Resources */,
 				26BED61A18736B10003FD5DD /* RandomPhrases.txt in Resources */,
 				26BD52411799FD9500A3B32C /* LICENSE.txt in Resources */,
 				268C1A91187522280009C96E /* MPCloseButtonX.png in Resources */,
@@ -1026,10 +1039,12 @@
 				26BED60318736B10003FD5DD /* Default@2x.png in Resources */,
 				26BED60118736B10003FD5DD /* Default-568h@2x.png in Resources */,
 				268C1A76187522280009C96E /* LICENSE in Resources */,
+				268C1A97187524700009C96E /* Icon120@2x.png in Resources */,
 				26BED60F18736B10003FD5DD /* RandomButton.png in Resources */,
 				26BED61818736B10003FD5DD /* DirtyAndSexPhrases.txt in Resources */,
 				26BED61018736B10003FD5DD /* RandomButton@2x.png in Resources */,
 				26BED61518736B10003FD5DD /* WorkButton.png in Resources */,
+				268C1A9D1875261A0009C96E /* Icon29.png in Resources */,
 				26BED60418736B10003FD5DD /* DirtySexButton.png in Resources */,
 				26BED61618736B10003FD5DD /* WorkButton@2x.png in Resources */,
 				26BED60A18736B10003FD5DD /* QuestionBackground-568h@2x.png in Resources */,
@@ -1042,6 +1057,7 @@
 				26BED5FF18736B10003FD5DD /* CategoryBackground.png in Resources */,
 				26BED60218736B10003FD5DD /* Default.png in Resources */,
 				268C1A92187522280009C96E /* MPCloseButtonX@2x.png in Resources */,
+				268C1A9F1875261A0009C96E /* Icon80@2x.png in Resources */,
 				26BED60618736B10003FD5DD /* DrinkingButton.png in Resources */,
 				26BED61918736B10003FD5DD /* DrinkingPhrases.txt in Resources */,
 			);
@@ -1070,24 +1086,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268C1A84187522280009C96E /* MRVideoPlayerManager.m in Sources */,
-				268C1A6A187522280009C96E /* MPURLResolver.m in Sources */,
+				26BED61718736B10003FD5DD /* MBProgressHUD.m in Sources */,
+				2690409C175177B5004EA055 /* AboutViewController.m in Sources */,
 				269D7BDC17443CF50036511A /* main.m in Sources */,
 				269D7BE017443CF50036511A /* AppDelegate.m in Sources */,
 				269D7BE917443CF50036511A /* ViewController.m in Sources */,
-				268C1A8D187522280009C96E /* MPReachability.m in Sources */,
-				268C1A85187522280009C96E /* NSURL+MPAdditions.m in Sources */,
 				269D7BF917443E680036511A /* DataStorage.m in Sources */,
 				26BED5CA187346E8003FD5DD /* InAppPurchaseManager.m in Sources */,
 				269D7BFD17443EBC0036511A /* QuestionViewController.m in Sources */,
+				268C1A8D187522280009C96E /* MPReachability.m in Sources */,
+				268C1A85187522280009C96E /* NSURL+MPAdditions.m in Sources */,
+				268C1A84187522280009C96E /* MRVideoPlayerManager.m in Sources */,
 				268C1A66187522280009C96E /* MPAdServerURLBuilder.m in Sources */,
+				268C1A6A187522280009C96E /* MPURLResolver.m in Sources */,
 				268C1A60187522280009C96E /* MPAdAlertManager.m in Sources */,
 				268C1A5E187522280009C96E /* MPLegacyBannerCustomEventAdapter.m in Sources */,
 				268C19DD187522180009C96E /* MPInterstitialCustomEvent.m in Sources */,
 				268C1A74187522280009C96E /* MPLegacyInterstitialCustomEventAdapter.m in Sources */,
 				268C1A70187522280009C96E /* MPBaseInterstitialAdapter.m in Sources */,
 				268C1A5F187522280009C96E /* MPAdAlertGestureRecognizer.m in Sources */,
-				2690409C175177B5004EA055 /* AboutViewController.m in Sources */,
 				268C1A68187522280009C96E /* MPLastResortDelegate.m in Sources */,
 				268C1A6F187522280009C96E /* MPHTMLInterstitialViewController.m in Sources */,
 				26BD52311799FD9500A3B32C /* MPiAdBannerCustomEvent.m in Sources */,
@@ -1139,7 +1156,6 @@
 				268C19DA187522180009C96E /* MPAdView.m in Sources */,
 				268C1A71187522280009C96E /* MPInterstitialAdManager.m in Sources */,
 				26BD52401799FD9500A3B32C /* CJSONSerializer.m in Sources */,
-				26BED61718736B10003FD5DD /* MBProgressHUD.m in Sources */,
 				268C1A61187522280009C96E /* MPAdBrowserController.m in Sources */,
 				268C1A83187522280009C96E /* MRProperty.m in Sources */,
 				26BD52A5179A33A000A3B32C /* GreystripeBannerCustomEvent.m in Sources */,

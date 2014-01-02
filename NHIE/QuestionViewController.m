@@ -154,6 +154,8 @@
 }
 
 -(IBAction)goBack {
+    [questionArray removeAllObjects];
+    [questionLabel setText:@""];
     if (self.interstitial.ready) {
         [Flurry logEvent:@"Full Screen Ad Shown"];
         [self.interstitial showFromViewController:self];
