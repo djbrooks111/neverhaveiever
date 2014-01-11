@@ -105,7 +105,6 @@
 		269D7C7A174440340036511A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D7C79174440340036511A /* Security.framework */; };
 		269D7C7F174441210036511A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269D7C7D174441210036511A /* ViewController.xib */; };
 		269D7C80174441210036511A /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269D7C7E174441210036511A /* QuestionViewController.xib */; };
-		26B081B81797378600716BD8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B081B71797378600716BD8 /* Crashlytics.framework */; };
 		26BD51651799EA7600A3B32C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD51641799EA7600A3B32C /* Accounts.framework */; };
 		26BD51681799EA7F00A3B32C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD51661799EA7E00A3B32C /* AddressBook.framework */; };
 		26BD51691799EA7F00A3B32C /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BD51671799EA7F00A3B32C /* AddressBookUI.framework */; };
@@ -349,7 +348,6 @@
 		269D7C79174440340036511A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		269D7C7D174441210036511A /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		269D7C7E174441210036511A /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
-		26B081B71797378600716BD8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		26BD51641799EA7600A3B32C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		26BD51661799EA7E00A3B32C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		26BD51671799EA7F00A3B32C /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -468,7 +466,6 @@
 				269D7BD017443CF50036511A /* UIKit.framework in Frameworks */,
 				269D7BD217443CF50036511A /* Foundation.framework in Frameworks */,
 				269D7BD417443CF50036511A /* CoreGraphics.framework in Frameworks */,
-				26B081B81797378600716BD8 /* Crashlytics.framework in Frameworks */,
 				26105547179A39F8005362BC /* libGreystripeSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,7 +699,6 @@
 				26BD51661799EA7E00A3B32C /* AddressBook.framework */,
 				26BD51671799EA7F00A3B32C /* AddressBookUI.framework */,
 				26BD51641799EA7600A3B32C /* Accounts.framework */,
-				26B081B71797378600716BD8 /* Crashlytics.framework */,
 				260FFB1A178A18D60052D72B /* iAd.framework */,
 				260FFB08178A16A60052D72B /* AVFoundation.framework */,
 				260FFB04178A16000052D72B /* CFNetwork.framework */,
@@ -1248,8 +1244,9 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../UpdatedNHIE\"",
-					"\"$(SRCROOT)\"",
+					"\\\"$(SRCROOT)/../UpdatedNHIE\\\"",
+					"$(SRCROOT)",
+					/Users/DJB/Desktop/Development/Projects/iOS/NHIE,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHIE/NHIE-Prefix.pch";
@@ -1277,8 +1274,9 @@
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../UpdatedNHIE\"",
-					"\"$(SRCROOT)\"",
+					"\\\"$(SRCROOT)/../UpdatedNHIE\\\"",
+					"$(SRCROOT)",
+					/Users/DJB/Desktop/Development/Projects/iOS/NHIE,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHIE/NHIE-Prefix.pch";
