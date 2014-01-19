@@ -10,7 +10,6 @@
 #import "QuestionViewController.h"
 #import "DataStorage.h"
 #import "AboutViewController.h"
-#import "Flurry.h"
 
 @interface ViewController : UIViewController {
     IBOutlet UINavigationBar *navigationBar;
@@ -24,7 +23,6 @@
     IBOutlet UIButton *workButton;
     IBOutlet UIButton *drinkingButton;
     IBOutlet UIButton *randomButton;
-    
 }
 
 - (IBAction)categoryButtonClicked:(UIButton *)button;

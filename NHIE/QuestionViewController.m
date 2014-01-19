@@ -38,54 +38,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"viewDidLoad entered");
-    [Flurry setEventLoggingEnabled:YES];
     
     // Creating background view
     [self createBackgroundView];
-    
-    [inAppPurchaseManager canMakePurchases];
-    
-
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isProUpgradePurchased"]) {
-        // Product has been purchased, do not show ads
-        [self.adView setHidden:YES];
-        [self.adView setAlpha:0];
-        [self.adView removeFromSuperview];
-        self.adView = NULL;
-        self.interstitial = NULL;
-        [removeAdButton setHidden:YES];
-        [removeAdButton removeFromSuperview];
-        removeAdButton.frame = CGRectMake(0, 0, 0, 0);
-        removeAdButton = NULL;
-    } else {
-        // Product has not been purchased, show ads
-        // MoPub
-        self.adView = [[MPAdView alloc] initWithAdUnitId:@"6f71e4b432744296a12deede3df084a3" size:MOPUB_BANNER_SIZE];
-        self.adView.testing = NO;
-        self.adView.delegate = self;
-        [self.adView startAutomaticallyRefreshingContents];
-        CGRect frame = self.adView.frame;
-        CGSize size = [self.adView adContentViewSize];
-        frame.origin.y = [[UIScreen mainScreen] applicationFrame].size.height - size.height;
-        self.adView.frame = frame;
-        [self.view addSubview:self.adView];
-        [self.adView loadAd];
-        
-        self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"b58296ef5de043a6be0270ee5ff35a4e"];
-        self.interstitial.testing = NO;
-        self.interstitial.delegate = self;
-        [self.interstitial loadAd];
-        
-        otherAdTracker = 1;
-        
-        NSLog(@"MoPub Banner Testing: %@ and Full Screen Testing: %@", self.adView.testing ? @"YES" : @"NO", self.interstitial.testing ? @"YES" : @"NO");
-    }
     
     navigationBar.topItem.title = categoryString;
     
     questionArray = [[NSMutableArray alloc] init];
     indexTracker = -1;
-    adTracker = 0;
 }
 
 -(void)createBackgroundView {
@@ -93,7 +53,6 @@
     UIImage *backgroundImage = [UIImage imageNamed:@"QuestionBackground.png"];
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
     [nextButton setImage:[UIImage imageNamed:@"QuestionButton.png"] forState:UIControlStateNormal];
-    [removeAdButton setHidden:NO];
     
     if (IS_SHORT_IPHONE) {
         // iPhone 4S - Regular and 2x backgrounds
@@ -112,38 +71,10 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"Adtracker: %d", adTracker);
-    
-    if (adTracker == 1) {
-        adTracker = 0;
-        [self leaveView];
-    } else {
-        if (otherAdTracker == 1) {
-            otherAdTracker = 0;
-        } else {
-            [self.adView loadAd];
-            [self.interstitial loadAd];
-        }
-    }
-    
+
     // Creating navigation bar
     navigationBar.topItem.title = categoryString;
     
-    // ADS
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isProUpgradePurchased"]) {
-        // Product purchased
-        [self.adView setHidden:YES];
-        [self.adView setAlpha:0];
-        [self.adView removeFromSuperview];
-        self.adView = NULL;
-        self.interstitial = NULL;
-        [removeAdButton setHidden:YES];
-        [removeAdButton removeFromSuperview];
-        removeAdButton.frame = CGRectMake(0, 0, 0, 0);
-        removeAdButton = NULL;
-    } else {
-        [removeAdButton setHidden:NO];
-    }
     
     questionLabel.text = @"";
     [questionArray removeAllObjects];
@@ -154,116 +85,17 @@
 }
 
 -(IBAction)goBack {
-    [questionArray removeAllObjects];
-    [questionLabel setText:@""];
-    if (self.interstitial.ready) {
-        [Flurry logEvent:@"Full Screen Ad Shown"];
-        [self.interstitial showFromViewController:self];
-    } else {
-        [self leaveView];
-    }
-}
-
--(IBAction)removeAds {
-    NSLog(@"Button Clicked");
-    [inAppPurchaseManager purchaseProUpgrade];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(purchaseComplete:) name:kInAppPurchaseManagerTransactionSucceededNotification object:nil];
-}
-
--(void)purchaseComplete:(NSNotification *)notification {
-    if ([[notification name] isEqualToString:kInAppPurchaseManagerTransactionSucceededNotification]) {
-        NSLog(@"Purchase Successful!");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No more ads for you!" message:@"You have successfully removed advertisements from\nNever Have I Ever!\nEnjoy!" delegate:self cancelButtonTitle:@"Done!" otherButtonTitles:nil, nil];
-        [alert show];
-        [self.adView setHidden:YES];
-        [self.adView setAlpha:0];
-        [self.adView removeFromSuperview];
-        self.adView = NULL;
-        self.interstitial = NULL;
-        [removeAdButton setHidden:YES];
-        [removeAdButton removeFromSuperview];
-        removeAdButton.frame = CGRectMake(0, 0, 0, 0);
-        removeAdButton = NULL;
-    }
-}
-
-// MoPub Banner
--(UIViewController *)viewControllerForPresentingModalView {
-    return self;
-}
-
--(void)adViewDidLoadAd:(MPAdView *)view {
-    NSLog(@"MoPub ad loaded");
-    [Flurry logEvent:@"Banner Ad Shown"];
-    CGSize size = [view adContentViewSize];
-    CGFloat centeredX = (self.view.bounds.size.width - size.width) / 2;
-    CGFloat bottomAlignedY = self.view.bounds.size.height - size.height;
-    view.frame = CGRectMake(centeredX, bottomAlignedY, size.width, size.height);
-    [self.adView setHidden:NO];
-}
-
--(void)adViewDidFailToLoadAd:(MPAdView *)view {
-    NSLog(@"MoPub ad failed to load");
-    [Flurry logEvent:@"Banner Ad Failed To Load"];
-    [self.adView setHidden:YES];
-}
-
--(void)willPresentModalViewForAd:(MPAdView *)view {
-    NSLog(@"MoPub ad has been clicked");
-}
-
--(void)didDismissModalViewForAd:(MPAdView *)view {
-    NSLog(@"MoPub ad was closed");
-}
-
--(void)willLeaveApplicationFromAd:(MPAdView *)view {
-    NSLog(@"MoPub leaving app");
-}
-
-// MoPub Interstitial
--(void)interstitialDidLoadAd:(MPInterstitialAdController *)interstitial {
-    NSLog(@"MoPub Full Screen ad loaded");
-}
-
--(void)interstitialDidFailToLoadAd:(MPInterstitialAdController *)interstitial {
-    NSLog(@"MoPub Full Screen ad failed to load");
-    [Flurry logEvent:@"Full Screen Ad Failed To Load"];
-}
-
--(void)interstitialWillAppear:(MPInterstitialAdController *)interstitial {
-    NSLog(@"MoPub Full Screen ad about to appear");
-    adTracker = 1;
-}
-
--(void)interstitialWillDisappear:(MPInterstitialAdController *)interstitial {
-    NSLog(@"MoPub Full Screen ad about to disappear");
-}
-
--(void)interstitialDidAppear:(MPInterstitialAdController *)interstitial {
-    NSLog(@"MoPub Full Screen ad appeared");
-}
-
--(void)interstitialDidDisappear:(MPInterstitialAdController *)interstitialView {
-    NSLog(@"MoPub Full Screen ad disappeared");
-    if (![self.presentedViewController isBeingDismissed]) {
-        [self leaveView];
-    }
+    [self leaveView];
 }
 
 -(void)leaveView {
     questionLabel.text = @"";
     navigationBar.topItem.title = @"";
-    [self.adView stopAutomaticallyRefreshingContents];
-    [self.adView setHidden:YES];
     [questionArray removeAllObjects];
     [self resignFirstResponder];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
--(void)setAdTracker:(int)tracker {
-    adTracker = tracker;
-}
 
 // Getting questions
 -(void)showProgressView {
@@ -286,20 +118,11 @@
 }
 
 -(void)getQuestions {
-    NSString *addressString = [NSString stringWithFormat:@"http://www.brooksphere.com/neverhaveiever/%@.txt", urlString];
-    NSURL *url = [NSURL URLWithString:addressString];
-    NSString *myFile = [NSString stringWithContentsOfURL:url encoding:NSASCIIStringEncoding error:NULL];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:urlString ofType:@"txt"];
+    NSString *myFile = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
     NSArray *phrases = [myFile componentsSeparatedByString:@"\n"];
     [questionArray addObjectsFromArray:phrases];
-    NSLog(@"Count: %d", [questionArray count]);
-    
-    if ([questionArray count] == 0) {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:urlString ofType:@"txt"];
-        NSString *myFile = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-        NSArray *phrases = [myFile componentsSeparatedByString:@"\n"];
-        [questionArray addObjectsFromArray:phrases];
-        NSLog(@"New Count: %d", [questionArray count]);
-    }
+    NSLog(@"New Count: %d", [questionArray count]);
 }
 
 -(void)shuffleQuestions {

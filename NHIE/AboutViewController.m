@@ -66,18 +66,6 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
--(IBAction)restore {
-    [inAppPurchaseManager restorePurchases];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(restoreComplete:) name:kInAppPurchaseManagerTransactionSucceededNotification object:nil];
-}
-
--(void)restoreComplete:(NSNotification *)notification {
-    if ([[notification name] isEqualToString:kInAppPurchaseManagerTransactionSucceededNotification]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Purchase Restored" message:@"You will no longer see any advertisments!" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil, nil];
-        [alert show];
-    }
-}
 
 - (void)didReceiveMemoryWarning
 {

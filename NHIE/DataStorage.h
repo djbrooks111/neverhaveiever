@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "InAppPurchaseManager.h"
 
 extern NSString *categoryString;
 extern NSString *urlString;
-extern InAppPurchaseManager *inAppPurchaseManager;
 
 @interface DataStorage : NSObject
 

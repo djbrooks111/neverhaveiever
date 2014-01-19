@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "DataStorage.h"
-#import <Crashlytics/Crashlytics.h>
-#import "Flurry.h"
 
 @class ViewController;
 

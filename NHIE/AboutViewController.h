@@ -12,7 +12,6 @@
 @interface AboutViewController : UIViewController {
     IBOutlet UINavigationBar *navigationBar;
     IBOutlet UIBarButtonItem *navigationBarBackButton;
-    IBOutlet UIButton *restoreButton;
 }
 
 @end

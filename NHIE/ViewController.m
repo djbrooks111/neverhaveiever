@@ -32,10 +32,6 @@
     // Creating the background view
     [self createBackgroundView];
     
-    // In App Purchases
-    inAppPurchaseManager = [[InAppPurchaseManager alloc] init];
-    [inAppPurchaseManager loadStore];
-    
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"AlreadyRan"]) {
         // Has not run before
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AlreadyRan"];
@@ -132,8 +128,6 @@
         default:
             break;
     }
-    
-    [Flurry logEvent:[NSString stringWithFormat:@"Selected %@", categoryString]];
     
     // Go to next view
     [self presentViewController:questionView animated:YES completion:NULL];

@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="navigationBar" destination="4" id="9"/>
                 <outlet property="navigationBarBackButton" destination="10" id="11"/>
-                <outlet property="restoreButton" destination="13" id="17"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -34,21 +33,6 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="13">
-                    <rect key="frame" x="90" y="317" width="140" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" title="Restore Purchase">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="restore" destination="-1" eventType="touchUpInside" id="16"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.1098039299" green="0.1176470667" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
